@@ -34,10 +34,33 @@ VALUES
 'Jl. Martanegara, Lkr. Sel., Bandung, Kota Bandung, Jawa Barat 40263',
 -6.932857693796542,
 107.62800439981284,
-'["Pertalite, Pertamax"]',
+'["Pertalite", "Pertamax"]',
 DEFAULT,
 CURRENT_DATE
 );
 
+ALTER TABLE Lokasi
+ADD COLUMN external_id VARCHAR(255) UNIQUE;
+
 SELECT *
 FROM Lokasi;
+
+SELECT COUNT(*) AS jumlah_spbu
+FROM Lokasi
+WHERE kategori='SPBU';
+
+SELECT COUNT(*) AS total,
+       COUNT(lintang) AS ada_lintang,
+       COUNT(bujur) AS ada_bujur
+FROM Lokasi
+WHERE kategori = 'SPBU';
+
+SELECT id, nama, alamat, lintang, bujur, jam_operasi
+FROM Lokasi
+WHERE kategori = 'SPBU'
+LIMIT 10;
+
+DELETE FROM Lokasi
+WHERE kategori = 'SPBU';
+
+DESCRIBE Lokasi;

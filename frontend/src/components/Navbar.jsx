@@ -1,117 +1,223 @@
 import React, { useState } from 'react';
+import assets from '../assets/assets.mjs';
+import ThemeToogleBtn from './ThemeToogleBtn';
 
-const Navbar = ({ theme, setTheme }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+export default function Navbar({
+  onOpenAddModal,
+  theme,
+  setTheme
+}) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Asset gambar online eksternal
-  const assets = {
-    logo: "https://img.icons8.com/color/96/gas-station.png",
-    arrow_icon: "https://img.icons8.com/ios-glyphs/30/ffffff/long-arrow-right.png",
+  const handleMenuClick = (action) => {
+    setIsMenuOpen(false);
+
+    // Tambah titik → buka modal
+    if (action === 'tambah') {
+      onOpenAddModal();
+      return;
+    }
+
+    // Home → scroll ke paling atas
+    if (action === 'home') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+
+    // Temukan BBM
+    if (action === 'temukan') {
+      const section = document.getElementById('hasil-bbm');
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      return;
+    }
+
+    // Saran & Estimasi
+    if (action === 'saran') {
+      const section = document.getElementById('saran-estimasi');
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+
+      return;
+    }
   };
 
   return (
-    <nav style={{
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      alignItems: 'flex-start',
-      padding: '32px 24px',
-      position: 'fixed',
-      top: 0,
-      left: 0,
-      bottom: 0,
-      width: '240px',
-      zIndex: 50,
-      backgroundColor: theme === 'dark' ? '#0f172a' : '#ffffff',
-      color: theme === 'dark' ? '#ffffff' : '#1e293b',
-      borderRight: '1px solid ' + (theme === 'dark' ? '#334155' : '#e2e8f0'),
-      fontFamily: 'sans-serif'
-    }}>
+    <header className="sticky top-0 px-6 md:px-8 py-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 flex justify-between items-center relative z-50 transition-colors">
 
-      {/* 1. BAGIAN ATAS: LOGO & MENU LINKS */}
-      <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '40px' }}>
-        
-        {/* LOGO */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <img 
-            src={assets.logo} 
-            alt="Logo" 
-            style={{ width: '36px', height: '36px', objectFit: 'contain' }} 
+      {/* Logo */}
+      <div
+        className="flex items-center gap-2 cursor-pointer"
+        onClick={() => handleMenuClick('home')}
+      >
+        <div className="w-8 h-8 bg-red-600 rounded-lg flex items-center justify-center shadow-sm">
+          <img
+            src={
+              theme === 'dark'
+                ? assets.gas_station_dark
+                : assets.gas_station
+            }
+            alt="BBM Finder Logo"
+            className="w-5 h-5"
           />
-          <span style={{ fontWeight: 'bold', fontSize: '20px', letterSpacing: '-0.5px' }}>
-            bbm<span style={{ color: '#2563eb' }}>.finder</span>
-          </span>
         </div>
 
-        {/* MENU LINKS (MENURUN KE BAWAH) */}
-        <div style={{ 
-          display: 'flex', 
-          flexDirection: 'column', 
-          gap: '20px',
-          fontSize: '15px',
-          fontWeight: '500'
-        }}>
-          <a href="#home" style={{ color: 'inherit', textDecoration: 'none' }}>Home</a>
-          <a href="#peta" style={{ color: 'inherit', textDecoration: 'none' }}>Peta BBM</a>
-          <a href="#daftar" style={{ color: 'inherit', textDecoration: 'none' }}>Daftar Tempat</a>
-          <a href="#tambah" style={{ color: 'inherit', textDecoration: 'none' }}>Tambah Lokasi</a>
-        </div>
-
+        <span className="font-bold text-lg tracking-tight text-gray-900 dark:text-white">
+            BBM<span className="text-red-600">Finder</span></span>
       </div>
 
-      {/* 2. BAGIAN BAWAH: TOGGLE THEME & TOMBOL CONNECT */}
-      <div style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        
-        {/* Tombol Theme (Bulan / Matahari) */}
-        <button 
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-          style={{
-            width: '40px',
-            height: '40px',
-            borderRadius: '50%',
-            border: '1px solid ' + (theme === 'dark' ? '#475569' : '#cbd5e1'),
-            backgroundColor: 'transparent',
-            color: 'inherit',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '16px'
-          }}
+      {/* Desktop Menu */}
+      <nav className="hidden md:flex items-center gap-6">
+
+        <button
+          onClick={() => handleMenuClick('home')}
+          className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition"
         >
-          {theme === 'dark' ? '☀️' : '🌙'}
+          Home
         </button>
 
-        {/* Tombol Biru Pill */}
-        <a 
-          href="#peta" 
-          style={{
-            backgroundColor: '#2563eb',
-            color: '#ffffff',
-            padding: '12px 20px',
-            borderRadius: '9999px',
-            fontSize: '14px',
-            fontWeight: '600',
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: '8px',
-            boxShadow: '0 4px 6px -1px rgba(37, 99, 235, 0.2)'
-          }}
+        <button
+          onClick={() => handleMenuClick('temukan')}
+          className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition"
         >
-          <span>Connect</span>
-          <img 
-            src={assets.arrow_icon} 
-            alt="arrow" 
-            style={{ width: '14px', height: '14px', filter: 'brightness(0) invert(1)' }} 
-          />
-        </a>
+          Temukan BBM
+        </button>
+
+        <button
+          onClick={() => handleMenuClick('tambah')}
+          className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition"
+        >
+          Tambah Titik
+        </button>
+
+        <button
+          onClick={() => handleMenuClick('saran')}
+          className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition"
+        >
+          Saran & Estimasi
+        </button>
+
+        <ThemeToogleBtn
+          theme={theme}
+          setTheme={setTheme}
+        />
+
+      </nav>
+
+      {/* Mobile Hamburger */}
+      <div className="relative md:hidden">
+
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-2 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-200 transition flex items-center justify-center focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          {isMenuOpen ? (
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </button>
+
+        {isMenuOpen && (
+          <>
+            {/* Overlay */}
+            <div
+              className="fixed inset-0 z-40 bg-black/20"
+              onClick={() => setIsMenuOpen(false)}
+            />
+
+            {/* Dropdown */}
+            <div className="absolute right-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 py-2 z-50 text-xs font-medium space-y-1">
+
+              <button
+                onClick={() => handleMenuClick('home')}
+                className="w-full text-left px-4 py-2.5 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 flex items-center gap-3 transition text-gray-700 dark:text-gray-200"
+              >
+                <span>🏠</span>
+                <span>Home</span>
+              </button>
+
+              <button
+                onClick={() => handleMenuClick('temukan')}
+                className="w-full text-left px-4 py-2.5 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 flex items-center gap-3 transition text-gray-700 dark:text-gray-200"
+              >
+                <span>🗺️</span>
+                <span>Temukan BBM</span>
+              </button>
+
+              <button
+                onClick={() => handleMenuClick('tambah')}
+                className="w-full text-left px-4 py-2.5 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 flex items-center gap-3 transition text-gray-700 dark:text-gray-200"
+              >
+                <span>➕</span>
+                <span>Daftar Titik BBM Baru</span>
+              </button>
+
+              <button
+                onClick={() => handleMenuClick('saran')}
+                className="w-full text-left px-4 py-2.5 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 flex items-center gap-3 transition text-gray-700 dark:text-gray-200"
+              >
+                <span>💡</span>
+                <span>Saran & Estimasi Bensin</span>
+              </button>
+
+              <div className="my-1 border-t border-gray-100 dark:border-gray-700" />
+
+              {/* Theme Toggle */}
+              <div className="px-4 py-2 flex items-center justify-between text-gray-700 dark:text-gray-200">
+                <span>Mode Tampilan</span>
+
+                <ThemeToogleBtn
+                  theme={theme}
+                  setTheme={setTheme}
+                />
+              </div>
+
+            </div>
+          </>
+        )}
 
       </div>
 
-    </nav>
+    </header>
   );
-};
-
-export default Navbar;
+}
