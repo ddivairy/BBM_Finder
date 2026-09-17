@@ -90,6 +90,7 @@ export default function SaranEstimasi({ userLocation, lokasiList }) {
         className="max-w-6xl w-full mx-auto px-4 py-8 space-y-6"
     >
 
+
       {/* Header */}
       <div className="space-y-2">
         <span className="inline-block text-[11px] font-bold tracking-wider text-red-500 bg-red-50 dark:bg-red-950/50 border border-red-100 dark:border-red-900/40 px-3 py-1 rounded-full uppercase">
