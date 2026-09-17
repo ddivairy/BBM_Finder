@@ -39,25 +39,10 @@ export default function Navbar({
       }
 
       return;
-    }
-
-    // Saran & Estimasi
-    if (action === 'saran') {
-      const section = document.getElementById('saran-estimasi');
-
-      if (section) {
-        section.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-
-      return;
-    }
-  };
+    }}
 
   return (
-    <header className="sticky top-0 px-6 md:px-8 py-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 flex justify-between items-center relative z-50 transition-colors">
+    <header className="sticky top-0 px-6 md:px-8 py-4 bg-white/80 dark:bg-gray-900/70 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 flex justify-between items-center relative z-50 transition-colors">
 
       {/* Logo */}
       <div
@@ -102,13 +87,6 @@ export default function Navbar({
           className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition"
         >
           Tambah Titik
-        </button>
-
-        <button
-          onClick={() => handleMenuClick('saran')}
-          className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition"
-        >
-          Saran & Estimasi
         </button>
 
         <ThemeToogleBtn
@@ -190,14 +168,6 @@ export default function Navbar({
               >
                 <span>➕</span>
                 <span>Daftar Titik BBM Baru</span>
-              </button>
-
-              <button
-                onClick={() => handleMenuClick('saran')}
-                className="w-full text-left px-4 py-2.5 hover:bg-red-50 dark:hover:bg-gray-700 hover:text-red-600 dark:hover:text-red-400 flex items-center gap-3 transition text-gray-700 dark:text-gray-200"
-              >
-                <span>💡</span>
-                <span>Saran & Estimasi Bensin</span>
               </button>
 
               <div className="my-1 border-t border-gray-100 dark:border-gray-700" />

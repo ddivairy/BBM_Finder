@@ -5,7 +5,6 @@ import Hero from './components/Hero.jsx';
 import MapView from './components/MapView.jsx';
 import LocationList from './components/LocationList.jsx';
 import AddLocationModal from './components/AddLocationModal.jsx';
-import SaranEstimasi from './components/SaranEstimasi.jsx';
 import 'leaflet/dist/leaflet.css';
 import Footer from './components/Footer.jsx';
 import assets from './assets/assets.mjs';
@@ -134,6 +133,7 @@ export default function App() {
               selectedLokasi={selectedLokasi}
               userLocation={userLocation}
               onSelectLokasi={(item) => setSelectedLokasi(item)}
+              theme={theme}
             />
             </div>
 
@@ -147,13 +147,6 @@ export default function App() {
             </div>
           </div>
         </main>
-
-        <div id="saran-estimasi" className="scroll-mt-24">
-          <SaranEstimasi 
-            userLocation={userLocation}
-            lokasiList={lokasiList}
-          />
-        </div>
 
         <Footer />
 

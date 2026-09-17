@@ -23,7 +23,7 @@ function ChangeView({ center }) {
   return null;
 }
 
-export default function MapView({ lokasiList, selectedLokasi, userLocation, onSelectLokasi }) {
+export default function MapView({ lokasiList, selectedLokasi, userLocation, onSelectLokasi, theme}) {
   // Default koordinat (Bandung) jika belum ada yang dipilih
   const defaultCenter = [-6.9174, 107.6191];
   const activeCenter = selectedLokasi 

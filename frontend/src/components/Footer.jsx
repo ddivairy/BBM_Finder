@@ -13,7 +13,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 transition-colors">
+    <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 transition-colors">
       
       <div className="max-w-6xl mx-auto px-4 py-10">
 
@@ -58,12 +58,6 @@ export default function Footer() {
                 Temukan BBM
               </button>
 
-              <button
-                onClick={() => scrollToSection('saran-estimasi')}
-                className="text-sm text-left text-gray-500 dark:text-gray-400 hover:text-red-600 transition"
-              >
-                Estimasi BBM
-              </button>
             </div>
           </div>
 

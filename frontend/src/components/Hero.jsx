@@ -25,7 +25,7 @@ export default function Hero({ searchQuery, setSearchQuery, onUseLocation }) {
         className="text-3xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white transition-colors"
       >
         Temukan BBM Sebelum{' '}
-        <span className="bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-red-600 to-orange-500 dark:from-red-400 dark:to-orange-300 bg-clip-text text-transparent">
           Kehabisan
         </span>
       </motion.h1>
