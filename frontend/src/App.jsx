@@ -163,7 +163,7 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <Footer />
+        <Footer onOpenAddModal={() => setIsAddModalOpen(true)} />
 
         {/* Add Location Modal */}
         <AddLocationModal

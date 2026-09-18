@@ -1,4 +1,5 @@
 import React from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 
 export default function Footer() {
   const scrollToSection = (id) => {
@@ -13,7 +14,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 transition-colors">
+    <motion.footer
+    
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      duration: 0.5,
+      ease: "easeOut"
+    }}
+    
+    className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 transition-colors">
       
       <div className="max-w-6xl mx-auto px-4 py-10">
 
@@ -67,10 +77,11 @@ export default function Footer() {
               Kontribusi
             </h3>
 
-            <p className="text-sm text-gray-500 dark:text-gray-400 max-w-xs leading-relaxed">
+            <button 
+            className="text-sm text-gray-500 dark:text-gray-400 max-w-xs leading-relaxed">
               Menemukan titik BBM yang belum tersedia?
               Bantu pengguna lain dengan menambahkan lokasi baru.
-            </p>
+            </button>
           </div>
 
         </div>
@@ -89,6 +100,6 @@ export default function Footer() {
         </div>
 
       </div>
-    </footer>
+    </motion.footer>
   );
 }

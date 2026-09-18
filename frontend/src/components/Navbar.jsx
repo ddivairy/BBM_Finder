@@ -40,7 +40,16 @@ export default function Navbar({
   };
 
   return (
-    <header className="sticky top-0 px-6 md:px-8 py-4 bg-white/80 dark:bg-gray-800/70 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 flex justify-between items-center relative z-50 transition-colors">
+    <motion.header
+    
+    initial={{ opacity: 0, y: -20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{
+      duration: 0.5,
+      ease: "easeOut"
+    }}
+    
+    className="sticky top-0 px-6 md:px-8 py-4 bg-white/80 dark:bg-gray-800/70 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 flex justify-between items-center relative z-50 transition-colors">
 
       {/* Logo */}
       <div
@@ -149,6 +158,6 @@ export default function Navbar({
 
       </div>
 
-    </header>
+    </motion.header>
   );
 }

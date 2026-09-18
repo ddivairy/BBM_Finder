@@ -17,7 +17,7 @@ export default function NavigationMenu({
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
         >
           <Home className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-          <span>Home</span>
+          <span>Beranda</span>
         </button>
 
         <button
@@ -25,7 +25,7 @@ export default function NavigationMenu({
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
         >
           <Compass className="w-4 h-4 text-gray-500 dark:text-gray-400" />
-          <span>Temukan BBM</span>
+          <span> BBM</span>
         </button>
 
         <button

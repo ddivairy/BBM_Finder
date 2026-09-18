@@ -38,7 +38,7 @@ const ThemeToogleBtn = ({ theme, setTheme }) => {
       aria-label="Toggle Mode Tampilan"
     >
       {theme === 'dark' ? (
-        <Sun className="w-4 h-4 text-amber-500" />
+        <Sun className="w-4 h-4" />
       ) : (
         <Moon className="w-4 h-4" />
       )}
