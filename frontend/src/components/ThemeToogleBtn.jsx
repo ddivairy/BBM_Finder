@@ -1,32 +1,49 @@
-import React, {useEffect} from 'react'
-import assets from '../assets/assets.mjs'
+import React, { useEffect } from 'react';
+import { Moon, Sun } from 'lucide-react';
 
-const ThemeToogleBtn = ({theme,setTheme}) => {
-useEffect (()=>{
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setTheme(theme || (prefersDarkMode?'dark':'light'))
-},[])
+const ThemeToogleBtn = ({ theme, setTheme }) => {
 
+  // Ambil tema yang tersimpan saat pertama kali web dibuka
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
 
-useEffect (()=>{
-    if(theme === 'dark'){
-        document.documentElement.classList.add('dark')
-    } else{
-        document.documentElement.classList.remove('dark')
+    if (savedTheme) {
+      setTheme(savedTheme);
+    } else {
+      const prefersDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
+
+      setTheme(prefersDarkMode ? 'dark' : 'light');
     }
-    localStorage.setItem('theme', theme)
-},[theme])
+  }, [setTheme]);
+
+  // Terapkan tema + simpan ke localStorage
+  useEffect(() => {
+    if (!theme) return;
+
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
-    <button>
-        {theme === 'dark' ? (
-            <img onClick={()=> setTheme('light')} src={assets.sun} className='size-8.5 p-1.5 border border-gray-500 rounded-full' alt=''/>
-        ) : (
-            <img onClick={()=> setTheme('dark')} src={assets.moon} className='size-8.5 p-1.5 border border-gray-500 rounded-full' alt=''/>
-        )}
-
+    <button
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      className="p-2 rounded-full border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-600 dark:text-gray-300 transition-colors"
+      aria-label="Toggle Mode Tampilan"
+    >
+      {theme === 'dark' ? (
+        <Sun className="w-4 h-4 text-amber-500" />
+      ) : (
+        <Moon className="w-4 h-4" />
+      )}
     </button>
-  )
-}
+  );
+};
 
-export default ThemeToogleBtn
+export default ThemeToogleBtn;

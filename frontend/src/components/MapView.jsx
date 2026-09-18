@@ -32,6 +32,22 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
       ? [userLocation.lat, userLocation.lng]
       : defaultCenter;
 
+      const userIcon = L.divIcon({
+        className: '',
+        html: `
+          <div style="
+            width: 30px;
+            height: 30px;
+            background: #ef4444;
+            border: 3px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 0 5px rgba(239, 68, 68, 0.25);
+          "></div>
+        `,
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+
   return (
   <div className="w-full h-full relative z-0 rounded-2xl overflow-hidden">
       <MapContainer 
@@ -46,18 +62,21 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        {userLocation && (
-        <Marker position={[userLocation.lat, userLocation.lng]}>
-          <Popup>
-            <div className="text-sm">
-              <p className="font-bold">Lokasi Saya</p>
-              <p className="text-xs text-gray-500">
-                Posisi kamu saat ini
-              </p>
-            </div>
-          </Popup>
-        </Marker>
-      )}
+          {userLocation && (
+          <Marker
+            position={[userLocation.lat, userLocation.lng]}
+            icon={userIcon}
+          >
+            <Popup>
+              <div className="text-sm">
+                <p className="font-bold">Lokasi Saya</p>
+                <p className="text-xs text-gray-500">
+                  Posisi kamu saat ini
+                </p>
+              </div>
+            </Popup>
+          </Marker>
+        )};
 
         {lokasiList.map((item) => (
           <Marker 
@@ -70,7 +89,7 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
             <Popup>
               <div className="p-1 max-w-xs">
                 <span className={`inline-block text-[10px] font-bold px-2 py-0.5 rounded uppercase mb-1 ${
-                  item.kategori === 'spbu' ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-800'
+                  item.kategori === 'spbu' ? 'bg-red-100 text-red-700' : 'bg-amber-100 text-amber-800'
                 }`}>
                   {item.kategori}
                 </span>
@@ -78,7 +97,7 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
                 <p className="text-xs text-gray-600 mt-1">{item.alamat || 'Alamat tidak tersedia'}</p>
                 <div className="flex flex-wrap gap-1 mt-2">
                   {item.tipe_bensin.map((b, idx) => (
-                    <span key={idx} className="bg-gray-100 text-gray-700 text-[10px] px-1.5 py-0.5 rounded border">
+                    <span key={idx} className="bg-gray-100 text-gray-700 text-[10px] px-1.5 py-0.5 rounded">
                       {b}
                     </span>
                   ))}

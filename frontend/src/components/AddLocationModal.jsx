@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Fix ikon marker Leaflet
 const markerIcon = new L.Icon({
@@ -19,16 +20,25 @@ function LocationPicker({ position, setPosition }) {
     },
   });
 
-  return position ? <Marker position={position} icon={markerIcon} /> : null;
+return position ? <Marker position={position} icon={markerIcon} /> : null;
 }
+
+const pilihanBensin = [
+  'Pertalite',
+  'Pertamax',
+  'Pertamax Turbo',
+  'Solar',
+  'Dexlite',
+  'Pertamina Dex',
+];
 
 export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
   const [formData, setFormData] = useState({
     nama: '',
-    kategori: 'SPBU',
+    kategori: 'spbu',
     harga: '',
     alamat: '',
-    jam_buka: '',
+    jam_operasi: '',
     kontak: '',
     catatan: '',
     tipe_bensin: ['Pertalite'],
@@ -38,7 +48,6 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  if (!isOpen) return null;
 
   // Gunakan Lokasi Saya
   const handleUseMyLocation = () => {
@@ -105,7 +114,7 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
           kategori: 'SPBU',
           harga: '',
           alamat: '',
-          jam_buka: '',
+          jam_operasi: '',
           kontak: '',
           catatan: '',
           tipe_bensin: ['Pertalite'],
@@ -128,9 +137,28 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs overflow-y-auto">
+    <AnimatePresence>
+      {isOpen && (
+    <motion.div
 
-      <div className="bg-white dark:bg-gray-900 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-gray-100 dark:border-gray-800 my-8 transition-colors">
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    transition={{ duration: 0.2 }}
+    
+    className="fixed inset-0 z-50 overflow-y-auto bg-black/50 backdrop-blur-xs p-4 sm:p-6 flex justify-center items-start">
+
+      <motion.div
+      
+      initial={{ opacity: 0, y: 30, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 20, scale: 0.98 }}
+      transition={{
+        duration: 0.3,
+        ease: "easeOut"
+      }}
+      
+      className="bg-white dark:bg-gray-900 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-gray-100 dark:border-gray-800 my-auto transition-colors">
 
         {/* Header */}
         <div className="space-y-1 mb-6">
@@ -140,7 +168,7 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
           </span>
 
           <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white">
-            Tambah Titik BBM
+            Tambah Lokasi BBM
           </h2>
 
           <p className="text-xs text-gray-500 dark:text-gray-400">
@@ -227,6 +255,54 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
 
           </div>
 
+          {/* Jenis BBM */}
+          <div>
+            <label className="block font-semibold text-gray-700 dark:text-gray-300 mb-2">
+              Jenis BBM
+              <span className="text-red-500 ml-1">*</span>
+            </label>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              {pilihanBensin.map((bensin) => (
+                <label
+                  key={bensin}
+                  className={`flex items-center gap-2 px-3 py-2.5 rounded-xl border cursor-pointer transition ${
+                    formData.tipe_bensin.includes(bensin)
+                      ? 'border-red-500 bg-red-50 dark:bg-red-950/30'
+                      : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700'
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    value={bensin}
+                    checked={formData.tipe_bensin.includes(bensin)}
+                    onChange={(e) => {
+                      const checked = e.target.checked;
+
+                      setFormData((prev) => ({
+                        ...prev,
+                        tipe_bensin: checked
+                          ? [...prev.tipe_bensin, bensin]
+                          : prev.tipe_bensin.filter(
+                              (item) => item !== bensin
+                            ),
+                      }));
+                    }}
+                    className="accent-red-600"
+                  />
+
+                  <span className="text-[11px] text-gray-700 dark:text-gray-300">
+                    {bensin}
+                  </span>
+                </label>
+              ))}
+            </div>
+
+            <p className="text-[10px] text-gray-400 mt-1.5">
+              Pilih satu atau lebih jenis BBM yang tersedia.
+            </p>
+          </div>
+
           {/* Alamat */}
           <div>
             <label className="block font-semibold text-gray-700 dark:text-gray-300 mb-1">
@@ -262,11 +338,11 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
               <input
                 type="text"
                 placeholder="Contoh: 24 jam"
-                value={formData.jam_buka}
+                value={formData.jam_operasi}
                 onChange={(e) =>
                   setFormData({
                     ...formData,
-                    jam_buka: e.target.value
+                    jam_operasi: e.target.value
                   })
                 }
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
@@ -423,14 +499,16 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
               disabled={loading}
               className="px-6 py-2.5 rounded-full bg-red-600 hover:bg-red-700 text-white font-semibold text-xs transition shadow-md disabled:opacity-50"
             >
-              {loading ? 'Mengirim...' : 'Kirim titik'}
+              {loading ? 'Mengirim...' : 'Kirim lokasi'}
             </button>
 
           </div>
 
         </form>
 
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
+      )}
+    </AnimatePresence>
   );
 }

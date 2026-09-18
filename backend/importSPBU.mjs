@@ -1,6 +1,28 @@
 import fs from "fs";
 import db from "./config/db.mjs";
 
+const getAlamat = (tags = {}) => {
+    if (tags["addr:street"]) {
+        return [
+            tags["addr:street"],
+            tags["addr:housenumber"],
+            tags["addr:city"]
+        ]
+            .filter(Boolean)
+            .join(", ");
+    }
+
+    if (tags.branch) {
+        return `Jl. ${tags.branch}`;
+    }
+
+    if (tags.alt_name) {
+        return tags.alt_name;
+    }
+
+    return "Alamat belum tersedia";
+};
+
 try {
     console.log("Membaca data SPBU dari spbu-bandung.json...");
 
@@ -13,7 +35,6 @@ try {
     let dilewati = 0;
 
     for (const item of data.elements) {
-        // Ambil koordinat dari node atau center (way)
         const lat = item.lat ?? item.center?.lat;
         const lon = item.lon ?? item.center?.lon;
 
@@ -24,28 +45,23 @@ try {
 
         const tags = item.tags || {};
 
-        // Nama SPBU
         const nama = tags.name || "SPBU";
 
-        // ID unik dari OpenStreetMap
+        const kategori =
+            /pertamini|pertashop/i.test(nama)
+                ? "eceran"
+                : "spbu";
+
         const externalId = `osm-${item.type}-${item.id}`;
 
-        // Alamat
-        const alamat = [
-            tags["addr:street"],
-            tags["addr:housenumber"],
-            tags["addr:city"]
-        ]
-            .filter(Boolean)
-            .join(", ");
+        // Ambil alamat dari data OSM
+        const alamat = getAlamat(tags);
 
-        // Untuk sementara kita gunakan tipe BBM ini
         const tipeBensin = [
             "Pertalite",
             "Pertamax"
         ];
 
-        // Masukkan / update ke MySQL
         await db.execute(
             `
             INSERT INTO Lokasi
@@ -60,10 +76,11 @@ try {
                 verifikasi_terakhir,
                 external_id
             )
-            VALUES (?, 'SPBU', ?, ?, ?, ?, ?, CURRENT_DATE, ?)
+            VALUES (?, ?, ?, ?, ?, ?, ?, CURRENT_DATE, ?)
 
             ON DUPLICATE KEY UPDATE
                 nama = VALUES(nama),
+                kategori = VALUES(kategori),
                 alamat = VALUES(alamat),
                 lintang = VALUES(lintang),
                 bujur = VALUES(bujur),
@@ -72,6 +89,7 @@ try {
             `,
             [
                 nama,
+                kategori,
                 alamat,
                 lat,
                 lon,
@@ -84,6 +102,7 @@ try {
         berhasil++;
 
         console.log(`✓ ${nama}`);
+        console.log(`  📍 ${alamat}`);
     }
 
     console.log("\n==============================");

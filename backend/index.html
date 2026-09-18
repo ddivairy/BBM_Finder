@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
+            background-color: #ffffff;
             color: #333;
             max-width: 900px;
             margin: 0 auto;
@@ -21,7 +21,7 @@
         }
 
         .card {
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -182,7 +182,7 @@
     <h2>Daftar Lokasi BBM</h2>
 
     <div class="search-bar">
-        <input type="text" id="inputCari" placeholder="Cari berdasarkan nama..." style="flex:1;">
+        <input type="text" id="inputCari" placeholder="Cari berdasarkan nama, alamat, dll..." style="flex:1;">
         <button onClick="cariLokasi()">Cari</button>
         <button onClick="resetPencarian()" style="background-color: #2ecc71;">Reset</button>
     </div>
@@ -194,6 +194,7 @@
             <th>Nama</th>
             <th>Kategori</th>
             <th>Koordinat</th>
+            <th>Alamat</th>
             <th>BBM</th>
             <th>Jam Operasi</th>
             <th>Verifikasi</th>
@@ -297,16 +298,18 @@
     }
 
     async function cariLokasi() {
-        const namaDicari = document.getElementById('inputCari').value;
+        const namaDicari = document.getElementById('inputCari').value.trim();
+        
         if (!namaDicari) return ambilSemuaLokasi();
 
         try {
-            const response = await fetch(`${API_URL}/cari/${namaDicari}`);
+            const response = await fetch(`${API_URL}/cari?q=${encodeURIComponent(namaDicari)}`);
+            
             if (response.ok) {
                 const data = await response.json();
                 renderTabel(data);
             } else {
-                tabelBody.innerHTML = '<tr><td colspan="8" style="text-align:center;">Lokasi tidak ditemukan</td></tr>';
+                tabelBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">Lokasi tidak ditemukan</td></tr>';
             }
         } catch (error) {
             console.error('Gagal mencari data:', error);
@@ -321,7 +324,7 @@
     function renderTabel(data) {
         tabelBody.innerHTML = '';
         if (data.length === 0) {
-            tabelBody.innerHTML = '<tr><td colspan="8" style="text-align:center;">Tidak ada data</td></tr>';
+            tabelBody.innerHTML = '<tr><td colspan="9" style="text-align:center;">Tidak ada data</td></tr>';
             return;
         }
 
@@ -343,6 +346,7 @@
                 <td><b>${lokasi.nama}</b></td>
                 <td><span class="${badgeClass}">${lokasi.kategori.toUpperCase()}</span></td>
                 <td>${lokasi.lintang}, ${lokasi.bujur}</td>
+                <td>${lokasi.alamat || '-'}</td>
                 <td>${bbmList}</td>
                 <td>${lokasi.jam_operasi || '24 Jam'}</td>
                 <td>${lokasi.verifikasi_terakhir || '-'}</td>

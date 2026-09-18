@@ -9,7 +9,7 @@ DROP TABLE IF EXISTS Lokasi;
 CREATE TABLE Lokasi (
 	id INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(150) NOT NULL,
-    kategori ENUM('SPBU', 'eceran') NOT NULL DEFAULT 'eceran',
+    kategori ENUM('spbu', 'eceran') NOT NULL DEFAULT 'eceran',
     alamat TEXT,
     lintang DECIMAL (10, 8) NOT NULL,
     bujur DECIMAL (11, 8) NOT NULL,
@@ -45,9 +45,10 @@ ADD COLUMN external_id VARCHAR(255) UNIQUE;
 SELECT *
 FROM Lokasi;
 
-SELECT COUNT(*) AS jumlah_spbu
+SELECT COUNT(*)
 FROM Lokasi
-WHERE kategori='SPBU';
+WHERE kategori='SPBU'
+LIMIT 10;
 
 SELECT COUNT(*) AS total,
        COUNT(lintang) AS ada_lintang,
