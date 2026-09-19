@@ -92,18 +92,7 @@ export default function Hero({
           {/* Gunakan lokasi */}
           <button
             type="button"
-            onClick={() => {
-              setInputValue('');
-              setSearchQuery('');
-              onUseLocation();
-
-              setTimeout(() => {
-                document.getElementById('hasil-bbm')?.scrollIntoView({
-                  behavior: 'smooth',
-                  block: 'start'
-                });
-              }, 100);
-            }}
+            onClick={handleUseLocation}
             className="block text-[9px] sm:text-xs font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 px-1 sm:px-3 py-2 transition whitespace-nowrap"
           >
             Gunakan lokasi saya
