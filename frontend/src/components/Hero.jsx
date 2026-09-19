@@ -1,18 +1,48 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
 
-
-export default function Hero({ searchQuery, setSearchQuery, onUseLocation, onResetSearch, userLocation }) {
+export default function Hero({
+  searchQuery,
+  setSearchQuery,
+  onUseLocation,
+  onResetSearch,
+  userLocation
+}) {
   const [inputValue, setInputValue] = useState(searchQuery);
+
+  const handleUseLocation = () => {
+    setInputValue('');
+    setSearchQuery('');
+    onUseLocation();
+
+    setTimeout(() => {
+      document.getElementById('hasil-bbm')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 100);
+  };
+
+  const handleSearch = () => {
+    setSearchQuery(inputValue);
+
+    setTimeout(() => {
+      document.getElementById('hasil-bbm')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 100);
+  };
+
   return (
-    <section className="py-16 px-4 sm:px-12 lg:px-24 text-center max-w-5xl mx-auto space-y-6">
+    <section className="py-10 sm:py-16 px-4 sm:px-12 lg:px-24 text-center max-w-5xl mx-auto space-y-5 sm:space-y-6">
 
       {/* Badge */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="inline-block text-[11px] font-semibold tracking-wider text-red-500 dark:text-red-400 bg-red-50 dark:bg-red-950/50 border border-red-100 dark:border-red-900/40 px-3 py-1 rounded-full uppercase"
+        className="inline-block text-[10px] sm:text-[11px] font-semibold tracking-wider text-red-500 dark:text-red-400 bg-red-50 dark:bg-red-950/50 border border-red-100 dark:border-red-900/40 px-3 py-1 rounded-full uppercase"
       >
         Your Fuel, Your Way
       </motion.div>
@@ -22,7 +52,7 @@ export default function Hero({ searchQuery, setSearchQuery, onUseLocation, onRes
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="text-3xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white transition-colors"
+        className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-tight leading-tight text-gray-900 dark:text-white transition-colors"
       >
         Temukan BBM Sebelum{' '}
         <span className="text-red-600 dark:decoration-red-700">
@@ -35,79 +65,63 @@ export default function Hero({ searchQuery, setSearchQuery, onUseLocation, onRes
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-sm sm:text-lg text-gray-500 dark:text-gray-400 max-w-lg mx-auto transition-colors"
+        className="text-sm sm:text-base lg:text-lg text-gray-500 dark:text-gray-400 max-w-lg mx-auto leading-relaxed transition-colors"
       >
         Cari SPBU atau BBM eceran di sekitar Anda atau sepanjang perjalanan.
       </motion.p>
 
       {/* Search Bar */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
+        initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.7 }}
         className="pt-2 max-w-xl mx-auto w-full"
       >
-        
-      <div className="bg-white dark:bg-gray-800 p-2 rounded-full shadow-lg border border-gray-100 dark:border-gray-700 flex items-center gap-2 transition-colors">
 
-        <input
-          type="text"
-          placeholder="Masukkan lokasi atau tujuan..."
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-          className="flex-1 px-4 py-2 text-sm focus:outline-none bg-transparent text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
-        />
+        <div className="bg-white dark:bg-gray-800 p-1.5 sm:p-2 rounded-full shadow-lg border border-gray-100 dark:border-gray-700 flex items-center gap-0.5 sm:gap-2 transition-colors">
 
-        <button
-          type="button"
-          onClick={() => {
-            setInputValue('');
-            setSearchQuery('');
-            onUseLocation();
+          {/* Input */}
+          <input
+            type="text"
+            placeholder="Masukkan lokasi atau tujuan..."
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className="flex-1 min-w-0 px-2 sm:px-4 py-2 text-[11px] sm:text-sm focus:outline-none bg-transparent text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
+          />
 
-            setTimeout(() => {
-              document.getElementById('hasil-bbm')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }, 100);
-          }}
-          className="block text-[10px] sm:text-xs font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 px-1 sm:px-3 py-2 transition whitespace-nowrap"
-        >
-          Gunakan lokasi saya
-        </button>
-
-        {(inputValue || userLocation) && (
+          {/* Gunakan lokasi */}
           <button
             type="button"
-            onClick={() => {
-              setInputValue('');
-              onResetSearch();
-            }}
-            className="text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 px-2 transition whitespace-nowrap"
+            onClick={handleUseLocation}
+            className="block text-[9px] sm:text-xs font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 px-1 sm:px-3 py-2 transition whitespace-nowrap"
           >
-            Reset
+            Gunakan lokasi saya
           </button>
-        )}
 
-        <button
-          type="button"
-          onClick={() => {
-            setSearchQuery(inputValue);
+          {/* Reset */}
+          {(inputValue || userLocation) && (
+            <button
+              type="button"
+              onClick={() => {
+                setInputValue('');
+                onResetSearch();
+              }}
+              className="text-[9px] sm:text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 px-1 sm:px-2 transition whitespace-nowrap"
+            >
+              Reset
+            </button>
+          )}
 
-            setTimeout(() => {
-              document.getElementById('hasil-bbm')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-              });
-            }, 100);
-          }}
-          className="bg-red-600 hover:bg-red-700 text-white font-medium text-xs px-5 py-2.5 rounded-full transition shadow-sm whitespace-nowrap"
-        >
-          Cari BBM
-        </button>
+          {/* Cari */}
+          <button
+            type="button"
+            onClick={handleSearch}
+            className="bg-red-600 hover:bg-red-700 text-white font-medium text-[10px] sm:text-xs px-3 sm:px-5 py-2.5 rounded-full transition shadow-sm whitespace-nowrap"
+          >
+            Cari BBM
+          </button>
 
-      </div>
+        </div>
 
       </motion.div>
 
