@@ -73,6 +73,8 @@ export default function App() {
               },
               (error) => {
                 console.log('Gagal mendapatkan lokasi:', error);
+                console.log('Kode error:', error.code);
+                console.log('Pesan error:', error.message);
               }
             );
           }}
