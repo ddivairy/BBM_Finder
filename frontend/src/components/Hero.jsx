@@ -72,7 +72,7 @@ export default function Hero({ searchQuery, setSearchQuery, onUseLocation, onRes
               });
             }, 100);
           }}
-          className="w-full sm:w-auto mt-2 sm:mt-0 text-xs font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 py-2 transition"
+          className="block text-[10px] sm:text-xs font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 px-1 sm:px-3 py-2 transition whitespace-nowrap"
         >
           Gunakan lokasi saya
         </button>
