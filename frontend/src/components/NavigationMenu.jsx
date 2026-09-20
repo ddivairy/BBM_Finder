@@ -35,7 +35,6 @@ export default function NavigationMenu({
           <PlusCircle className="w-4 h-4 text-gray-500 dark:text-gray-400" />
           <span>Tambah Lokasi BBM</span>
         </button>
-
       </div>
 
       <hr className="my-2 border-gray-100 dark:border-gray-800" />

@@ -41,14 +41,12 @@ export default function Navbar({
 
   return (
     <motion.header
-    
     initial={{ opacity: 0, y: -20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{
       duration: 0.5,
       ease: "easeOut"
     }}
-    
     className="sticky top-0 px-6 md:px-8 py-4 bg-white/80 dark:bg-gray-800/70 backdrop-blur-md border-b border-gray-200/50 dark:border-gray-700/50 flex justify-between items-center relative z-50 transition-colors">
 
       {/* Logo */}
@@ -73,7 +71,7 @@ export default function Navbar({
         </span>
       </div>
 
-      {/* Desktop Menu */}
+      {/* Menu - Dekstop */}
       <nav className="hidden md:flex items-center gap-6">
 
         <button
@@ -90,7 +88,6 @@ export default function Navbar({
           Temukan BBM
         </button>
 
-        
         <button
           onClick={() => handleMenuClick('tambah')}
           className="text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-red-600 dark:hover:text-red-400 transition"
@@ -105,7 +102,7 @@ export default function Navbar({
 
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Menu - Mobile */}
       <div className="relative md:hidden">
 
         <button
@@ -123,7 +120,7 @@ export default function Navbar({
         <AnimatePresence>
           {isMenuOpen && (
             <>
-              {/* Overlay */}
+              {/* Overlay - Latar belakangnya */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -133,7 +130,7 @@ export default function Navbar({
                 onClick={() => setIsMenuOpen(false)}
               />
 
-              {/* Dropdown */}
+              {/* Dropdown Menu */}
               <motion.div
                 initial={{ opacity: 0, y: -8, scale: 0.98 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}

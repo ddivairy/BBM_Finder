@@ -1,12 +1,12 @@
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import { useEffect } from 'react';
-
-// Fix icon default Leaflet yang sering loss di React/Vite
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
+
+// Hapus leaflet default
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconUrl: markerIcon,
@@ -14,7 +14,7 @@ L.Icon.Default.mergeOptions({
   shadowUrl: markerShadow,
 });
 
-// Helper untuk menggeser pusat peta saat ada lokasi yang dipilih
+// Gerakin kamera peta
 function ChangeView({ center }) {
   const map = useMap();
   useEffect(() => {
@@ -23,7 +23,13 @@ function ChangeView({ center }) {
   return null;
 }
 
-export default function MapView({ lokasiList, selectedLokasi, userLocation, onSelectLokasi, theme}) {
+export default function MapView({ 
+  lokasiList, 
+  selectedLokasi, 
+  userLocation, 
+  onSelectLokasi
+}) {
+
   // Default koordinat (Bandung) jika belum ada yang dipilih
   const defaultCenter = [-6.9174, 107.6191];
   const activeCenter = selectedLokasi 
@@ -32,6 +38,7 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
       ? [userLocation.lat, userLocation.lng]
       : defaultCenter;
 
+      // Icon lokasi saya
       const userIcon = L.divIcon({
         className: '',
         html: `
@@ -48,6 +55,7 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
         iconAnchor: [9, 9],
       });
 
+  // Map
   return (
   <div className="w-full h-full relative z-0 rounded-2xl overflow-hidden">
       <MapContainer 
@@ -56,12 +64,17 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
         className="w-full h-full"
         zoomControl={false}
       >
-       <ChangeView center={selectedLokasi || userLocation ? activeCenter : null} />
+        <ChangeView
+          center={selectedLokasi || userLocation
+          ? activeCenter 
+          : null}
+        />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
+          {/* Penanda lokasi saya */}
           {userLocation && (
           <Marker
             position={[userLocation.lat, userLocation.lng]}
@@ -78,6 +91,7 @@ export default function MapView({ lokasiList, selectedLokasi, userLocation, onSe
           </Marker>
         )};
 
+        {/* Penanda lokasi SPBU */}
         {lokasiList.map((item) => (
           <Marker 
             key={item.id} 

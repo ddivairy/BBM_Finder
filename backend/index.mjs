@@ -1,27 +1,24 @@
 import express from "express";
 import cors from "cors";
 import db from "./config/db.mjs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const app = express();
 const PORT = 5000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(__dirname));
 
-
-// ==========================================
 // HOME
-// ==========================================
-
 app.get("/", (req, res) => {
-    res.send("Kehabisan bensin?");
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
-
-// ==========================================
-// 1. POST LOKASI
-// ==========================================
-
+// POST LOKASI
 app.post("/api/lokasi", async (req, res) => {
     try {
         const {
@@ -77,11 +74,7 @@ app.post("/api/lokasi", async (req, res) => {
     }
 });
 
-
-// ==========================================
-// 2. GET SEMUA LOKASI + FILTER KATEGORI
-// ==========================================
-
+// GET SEMUA LOKASI + FILTER KATEGORI
 app.get("/api/lokasi", async (req, res) => {
     try {
         const { kategori } = req.query;
@@ -110,16 +103,11 @@ app.get("/api/lokasi", async (req, res) => {
     }
 });
 
-
-// ==========================================
-// 3. SEARCH LOKASI
-// ==========================================
-
+// SEARCH LOKASI
 app.get("/api/lokasi/cari", async (req, res) => {
     try {
         const { q } = req.query;
 
-        // Jika search kosong → tampilkan semua lokasi
         if (!q || !q.trim()) {
             const [rows] = await db.execute(
                 "SELECT * FROM lokasi"
@@ -158,11 +146,7 @@ app.get("/api/lokasi/cari", async (req, res) => {
     }
 });
 
-
-// ==========================================
-// 4. PUT LOKASI
-// ==========================================
-
+// PUT LOKASI
 app.put("/api/lokasi/:id", async (req, res) => {
     try {
         const { id } = req.params;
@@ -225,11 +209,7 @@ app.put("/api/lokasi/:id", async (req, res) => {
     }
 });
 
-
-// ==========================================
-// 5. DELETE LOKASI
-// ==========================================
-
+// DELETE LOKASI
 app.delete("/api/lokasi/:id", async (req, res) => {
     try {
         const { id } = req.params;
@@ -260,11 +240,7 @@ app.delete("/api/lokasi/:id", async (req, res) => {
     }
 });
 
-
-// ==========================================
 // START SERVER
-// ==========================================
-
 app.listen(PORT, () => {
     console.log(
         `Server is running on http://localhost:${PORT}`

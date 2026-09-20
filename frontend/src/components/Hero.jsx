@@ -37,7 +37,7 @@ export default function Hero({
   return (
     <section className="py-10 sm:py-16 px-4 sm:px-12 lg:px-24 text-center max-w-5xl mx-auto space-y-5 sm:space-y-6">
 
-      {/* Badge */}
+      {/* Slogan */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function Hero({
         Your Fuel, Your Way
       </motion.div>
 
-      {/* Heading */}
+      {/* Header - Judul utama */}
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ export default function Hero({
         </span>
       </motion.h1>
 
-      {/* Description */}
+      {/* Deskripsi */}
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function Hero({
             className="flex-1 min-w-0 px-2 sm:px-4 py-2 text-[11px] sm:text-sm focus:outline-none bg-transparent text-gray-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500"
           />
 
-          {/* Gunakan lokasi */}
+          {/* Gunakan lokasi saya */}
           <button
             type="button"
             onClick={handleUseLocation}
@@ -106,7 +106,7 @@ export default function Hero({
                 setInputValue('');
                 onResetSearch();
               }}
-              className="text-[9px] sm:text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 px-1 sm:px-2 transition whitespace-nowrap"
+              className="text-[9px] sm:text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 px-0.5 sm:px-2 transition whitespace-nowrap shrink-0"
             >
               Reset
             </button>

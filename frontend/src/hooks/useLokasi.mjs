@@ -27,10 +27,9 @@ export function useLokasi(userLocation) {
 };
 
 
-  // Helper parsing JSON tipe_bensin safe
+  // Pembersih data - Tipe bensin
   const parseTipeBensin = (raw) => {
   if (!raw) return [];
-
   let data = raw;
 
   if (!Array.isArray(data)) {
@@ -49,12 +48,12 @@ export function useLokasi(userLocation) {
   );
 };
 
+  // Ambil data
   const fetchLokasi = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
       const data = await api.getLokasi(filterKategori);
-      // Format data bensin agar aman diproses frontend
       const formatted = data
       .map(item => {
         const jarak = userLocation
@@ -93,19 +92,14 @@ export function useLokasi(userLocation) {
   // Filter pencarian nama / alamat di frontend
   const filteredLokasi = lokasiList.filter(item => {
     const query = searchQuery.toLowerCase();
-
     const matchNama = item.nama.toLowerCase().includes(query);
-
     const matchAlamat = (item.alamat || '').toLowerCase().includes(query);
-
     const matchBensin = item.tipe_bensin.some(bensin =>
       bensin.toLowerCase().includes(query)
     );
-
     const matchJarak =
       filterJarak === 'semua' ||
       (item.jarak !== null && item.jarak <= Number(filterJarak));
-
     return (matchNama || matchAlamat || matchBensin) && matchJarak;
   });
 

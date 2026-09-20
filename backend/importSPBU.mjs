@@ -101,12 +101,12 @@ try {
 
         berhasil++;
 
-        console.log(`✓ ${nama}`);
-        console.log(`  📍 ${alamat}`);
+        console.log(`${nama}`);
+        console.log(`${alamat}`);
     }
 
     console.log("\n==============================");
-    console.log("✅ IMPORT SELESAI!");
+    console.log("IMPORT SELESAI!");
     console.log(`Berhasil diproses : ${berhasil}`);
     console.log(`Dilewati          : ${dilewati}`);
     console.log("==============================");
@@ -114,6 +114,6 @@ try {
     process.exit(0);
 
 } catch (error) {
-    console.error("❌ Gagal:", error);
+    console.error("Gagal:", error);
     process.exit(1);
 }

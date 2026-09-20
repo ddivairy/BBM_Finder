@@ -3,9 +3,9 @@ import mysql from "mysql2/promise"
 console.log("Menghubungkan ke database...")
 
 const db = await mysql.createConnection({
-  host: "localhost",
+  host: '127.0.0.1',
   user: 'root',
-  password: 'Taleshero100',
+  password: '',
   database: 'BBM_Finder'
 });
 

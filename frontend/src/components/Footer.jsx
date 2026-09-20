@@ -15,14 +15,12 @@ export default function Footer() {
 
   return (
     <motion.footer
-    
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{
       duration: 0.5,
       ease: "easeOut"
     }}
-    
     className="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 transition-colors">
       
       <div className="max-w-6xl mx-auto px-4 py-10">
@@ -30,7 +28,7 @@ export default function Footer() {
         {/* Main Footer */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
 
-          {/* Brand */}
+          {/* Logo */}
           <div className="max-w-sm">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -83,7 +81,6 @@ export default function Footer() {
               Bantu pengguna lain dengan menambahkan lokasi baru.
             </button>
           </div>
-
         </div>
 
         {/* Bottom */}

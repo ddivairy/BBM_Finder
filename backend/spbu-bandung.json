@@ -9,1478 +9,842 @@
   "elements": [
     {
       "type": "node",
-      "id": 29392017,
+      "id": 1000000001,
+      "lat": -6.93285769,
+      "lon": 107.6280044,
+      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Buah Batu No. 235, Turangga, Kec. Lengkong",
+        "amenity": "fuel",
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 34.40227 (Buah Batu)",
+        "ref": "34.402.27 Buah Batu",
+        "brand:wikidata": "Q1641044"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1000000002,
       "lat": -6.8876837,
       "lon": 107.6020333,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Cipaganti No. 138, Pasirkaliki, Kec. Cicendo",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Cipaganti Atas"
+        "name": "SPBU Pertamina 34.40116 (Cipaganti)",
+        "ref": "34.401.16 Cipaganti Atas",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 29392645,
+      "id": 1000000003,
       "lat": -6.9070048,
       "lon": 107.5858523,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Pajajaran No. 132, Pajajaran, Kec. Cicendo",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Husen Sastranegara"
+        "name": "SPBU Pertamina 34.40115 (Husen Sastranegara)",
+        "ref": "34.401.15 Husen Sastranegara",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 32520380,
+      "id": 1000000004,
       "lat": -6.8997316,
       "lon": 107.6343231,
       "tags": {
         "addr:city": "Bandung",
-        "addr:street": "Jalan Pahlawan, Cikutra, Cibeunying Kidul",
+        "addr:street": "Jalan Pahlawan No. 71, Cikutra, Kec. Cibeunying Kidul",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:diesel": "yes;lite",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:solar": "no",
-        "name": "Pertamina",
-        "opening_hours": "24/7",
-        "ref": "34.401.14 Pahlawan"
+        "name": "SPBU Pertamina 34.40114 (Pahlawan)",
+        "ref": "34.401.14 Pahlawan",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 32529107,
+      "id": 1000000005,
       "lat": -6.8806043,
       "lon": 107.5987095,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Dr. Setiabudi No. 170, Gegerkalong, Kec. Sukasari",
         "amenity": "fuel",
-        "name": "Pertamina",
-        "opening_hours": "24/7",
-        "ref": "Dr. Setiabudhi"
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 34.40111 (Setiabudhi)",
+        "ref": "34.401.11 Dr. Setiabudhi",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 32529115,
+      "id": 1000000006,
       "lat": -6.9185944,
       "lon": 107.5840572,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Jend. Sudirman No. 581, Dungus Cariang, Kec. Andir",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "compressed_air": "yes",
-        "name": "Pertamina",
-        "ref": "Sudirman"
+        "name": "SPBU Pertamina 34.40108 (Sudirman)",
+        "ref": "34.401.08 Sudirman",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 1107877728,
+      "id": 1000000007,
       "lat": -6.9165401,
       "lon": 107.6184175,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Sunda No. 83, Kebon Pisang, Kec. Sumur Bandung",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Sunda / Gudang Selatan"
+        "name": "SPBU Pertamina 34.40110 (Sunda)",
+        "ref": "34.401.10 Sunda / Gudang Selatan",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 1781964169,
+      "id": 1000000008,
       "lat": -6.9669124,
       "lon": 107.6814323,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Tol Purbaleunyi KM 149, Tegalluar, Kec. Buahbatu",
         "amenity": "fuel",
-        "name": "Pertamina",
-        "ref": "Purbaleunyi 149"
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 33.40201 (Rest Area Tol Purbaleunyi KM 149)",
+        "ref": "33.402.01 Purbaleunyi 149",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 1956516948,
+      "id": 1000000009,
       "lat": -6.8689864,
       "lon": 107.6208132,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Ir. H. Juanda No. 364, Dago, Kec. Coblong",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "compressed_air": "yes",
-        "name": "Pertamina",
-        "ref": "COCO Dago Atas"
+        "name": "SPBU Pertamina COCO 31.40101 (Dago Atas)",
+        "ref": "31.401.01 COCO Dago Atas",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 2016380280,
+      "id": 1000000010,
       "lat": -6.8890673,
       "lon": 107.5816606,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Dr. Djunjunan No. 139, Sukagalih, Kec. Sukajadi",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:biodiesel": "no",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "ref": "Surya Sumantri Babakan Jeruk"
+        "name": "SPBU Pertamina 34.40118 (Surya Sumantri)",
+        "ref": "34.401.18 Surya Sumantri Babakan Jeruk",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 2500443120,
+      "id": 1000000011,
       "lat": -6.9492397,
       "lon": 107.625816,
       "tags": {
-        "alt_name": "SPBU Cijagra",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Buah Batu No. 25, Cijagra, Kec. Lengkong",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40205 (Cijagra)",
+        "ref": "34.402.05 SPBU Cijagra",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 2500443121,
+      "id": 1000000012,
       "lat": -6.9548757,
       "lon": 107.6117403,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Moh. Toha No. 352, Mengger, Kec. Bandung Kidul",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40212 (Mengger)",
+        "ref": "34.402.12 Mengger / Moh. Toha",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 2701279836,
+      "id": 1000000013,
       "lat": -6.8910576,
       "lon": 107.6256199,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Sadang Serang No. 12, Sekeloa, Kec. Coblong",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Terminal Sadang Serang"
+        "name": "SPBU Pertamina 34.40120 (Sadang Serang)",
+        "ref": "34.401.20 Terminal Sadang Serang",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 3426583579,
+      "id": 1000000014,
       "lat": -6.9045444,
       "lon": 107.6734695,
       "tags": {
-        "addr:street": "Jalan A.H Nasution",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. A.H. Nasution No. 112, Sukamiskin, Kec. Arcamanik",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Sukamiskin"
+        "name": "SPBU Pertamina 34.40208 (Sukamiskin)",
+        "ref": "34.402.08 Sukamiskin",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 3426585961,
+      "id": 1000000015,
       "lat": -6.9289714,
       "lon": 107.7120823,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. A.H. Nasution No. 248, Cipadung, Kec. Panyileukan",
         "amenity": "fuel",
-        "branch": "Embah Jaksa Cipadung",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "name": "Pertamina",
-        "ref": "Embah Jaksa Cipadung"
+        "name": "SPBU Pertamina 34.40602 (Cipadung)",
+        "ref": "34.406.02 Embah Jaksa Cipadung",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 3429603357,
+      "id": 1000000016,
       "lat": -6.9057833,
       "lon": 107.6185972,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. LLRE Martadinata No. 120, Cihapit, Kec. Bandung Wetan",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40106 (Riau / Martadinata)",
+        "ref": "34.401.06 Riau / Merdeka",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 4143020532,
+      "id": 1000000017,
       "lat": -6.9223889,
       "lon": 107.6440384,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Jakarta No. 42, Babakan Surabaya, Kec. Kiaracondong",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Babakan Daese"
+        "name": "SPBU Pertamina 34.40215 (Babakan Surabaya)",
+        "ref": "34.402.15 Babakan Daese",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 4143041693,
+      "id": 1000000018,
       "lat": -6.9136217,
       "lon": 107.6517728,
       "tags": {
-        "addr:street": "Jalan Purwakarta",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Purwakarta No. 108, Antapani Tengah, Kec. Antapani",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Purwakarta"
+        "name": "SPBU Pertamina 34.40218 (Purwakarta Antapani)",
+        "ref": "34.402.18 Purwakarta",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 4143047589,
+      "id": 1000000019,
       "lat": -6.9183776,
       "lon": 107.644464,
       "tags": {
-        "addr:street": "Jalan Raya Kiara Condong",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Ibrahim Adjie No. 162, Kebonwaru, Kec. Batununggal",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "ref": "Soma Kiaracondong"
+        "name": "SPBU Pertamina 34.40220 (Kiaracondong)",
+        "ref": "34.402.20 Soma Kiaracondong",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 4143049089,
+      "id": 1000000020,
       "lat": -6.9136483,
       "lon": 107.6589018,
       "tags": {
-        "addr:street": "Jalan Terusan Jakarta",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Jakarta No. 182, Antapani Tengah, Kec. Antapani",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "name:it": "Pertamina",
-        "ref": "Terusan Jakarta"
+        "name": "SPBU Pertamina 34.40222 (Terusan Jakarta)",
+        "ref": "34.402.22 Terusan Jakarta",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 4327908913,
+      "id": 1000000021,
       "lat": -6.9129281,
       "lon": 107.5746074,
       "tags": {
         "addr:city": "Bandung",
-        "addr:street": "Jl. Rajawali Barat, Maleber, Andir",
+        "addr:street": "Jl. Rajawali Barat No. 89, Maleber, Kec. Andir",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "name:en": "Pertamina"
+        "name": "SPBU Pertamina 34.40122 (Rajawali)",
+        "ref": "34.401.22 Rajawali Barat",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 4329578164,
+      "id": 1000000022,
       "lat": -6.8992841,
       "lon": 107.6419203,
       "tags": {
         "addr:city": "Bandung",
+        "addr:street": "Jl. Cikutra No. 201, Neglasari, Kec. Cibeunying Kaler",
         "amenity": "fuel",
-        "branch": "Cikutra",
-        "fuel:biodiesel": "no",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "name": "Pertamina",
-        "not:brand:wikidata": "Q1641044",
-        "payment:cash": "yes",
-        "payment:ep_mypertamina": "yes",
-        "payment:qr": "limited",
-        "ref": "34.401.03"
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 34.40103 (Cikutra Atas)",
+        "ref": "34.401.03 Cikutra",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 5108763054,
+      "id": 1000000023,
       "lat": -6.9266538,
       "lon": 107.5748775,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Pasirkoja No. 230, Babakan, Kec. Babakan Ciparay",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "operator": "Pertamina"
+        "name": "SPBU Pertamina 34.40125 (Pasirkoja Exit)",
+        "ref": "34.401.25 Pasirkoja Exit Tol",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 5177959021,
+      "id": 1000000024,
       "lat": -6.9138016,
       "lon": 107.6951878,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Pacantel No. 45, Cisaranten Kulon, Kec. Arcamanik",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40226 (Arcamanik)",
+        "ref": "34.402.26 Arcamanik",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 5268872144,
+      "id": 1000000025,
       "lat": -6.9522858,
       "lon": 107.6379847,
       "tags": {
         "addr:city": "Bandung",
-        "addr:housenumber": "55",
-        "addr:postcode": "40266",
-        "addr:street": "Jalan Terusan Buah Batu",
+        "addr:street": "Jalan Terusan Buah Batu No. 55, Sekelimus, Kec. Buahbatu",
         "amenity": "fuel",
-        "name": "Pertamina",
-        "operator": "Pertamina",
-        "ref": "Sekelimus Buahbatu"
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 34.40266 (Terusan Buahbatu)",
+        "ref": "34.402.66 Sekelimus Buahbatu",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 5794030254,
+      "id": 1000000026,
       "lat": -6.9041715,
       "lon": 107.6650947,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Golf West No. 18, Cisaranten Bina Harapan, Kec. Arcamanik",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40228 (Golf Arcamanik)",
+        "ref": "34.402.28 Arcamanik Endah",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 6788925186,
+      "id": 1000000027,
       "lat": -6.9413633,
       "lon": 107.5820851,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Caringin No. 102, Babakan, Kec. Babakan Ciparay",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40129 (Caringin)",
+        "ref": "34.401.29 Jamika / Caringin",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 10166346703,
+      "id": 1000000028,
       "lat": -6.8567704,
       "lon": 107.5930499,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Gegerkalong Hilir No. 142, Isola, Kec. Sukasari",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:octane_92": "yes",
-        "name": "Pertashop",
-        "ref": "3P.40102",
-        "self_service": "no"
+        "name": "Pertashop Pertamina 3P.40102 (Gegerkalong Hilir)",
+        "ref": "3P.40102 Gegerkalong",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 11050346382,
+      "id": 1000000029,
       "lat": -6.9121984,
       "lon": 107.6370205,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Brigdir Jend. Katamso No. 64, Cihaur Geulis, Kec. Cibeunying Kaler",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40131 (Brigjen Katamso)",
+        "ref": "34.401.31 Katamso",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 11337326908,
+      "id": 1000000030,
       "lat": -6.9141507,
       "lon": 107.5708193,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Elang Raya No. 2, Maleber, Kec. Andir",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40133 (Elang Cibeureum)",
+        "ref": "34.401.33 Elang / Cibeureum",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 11869631702,
+      "id": 1000000031,
       "lat": -6.9294651,
       "lon": 107.579498,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Pasirkoja No. 112, Sukahaji, Kec. Babakan Ciparay",
         "amenity": "fuel",
-        "branch": "Terusan Pasirkoja",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "compressed_air": "yes",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40135 (Terusan Pasirkoja)",
+        "ref": "34.401.35 Terusan Pasirkoja",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 11869640786,
+      "id": 1000000032,
       "lat": -6.9224243,
       "lon": 107.6306979,
       "tags": {
-        "alt_name": "SPBU Laswi",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Laswi No. 42, Kacapiring, Kec. Batununggal",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina",
-        "operator": "Pertamina"
+        "name": "SPBU Pertamina 34.40230 (Laswi)",
+        "ref": "34.402.30 SPBU Laswi",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 11869686069,
+      "id": 1000000033,
       "lat": -6.8936046,
       "lon": 107.5859941,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Dr. Djunjunan No. 220, Sukagalih, Kec. Sukajadi",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40136 (Pasteur Outbound)",
+        "ref": "34.401.36 Pasteur Outbound",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 12639916346,
+      "id": 1000000034,
       "lat": -6.9295816,
       "lon": 107.5776794,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Pasirkoja No. 178, Jamika, Kec. Bojongloa Kaler",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40138 (Pasirkoja Selatan)",
+        "ref": "34.401.38 Pasirkoja",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 13796130757,
+      "id": 1000000035,
       "lat": -6.9362243,
       "lon": 107.7006288,
       "tags": {
-        "addr:street": "Jalan Soekarno-Hatta",
+        "addr:city": "Bandung",
+        "addr:street": "Jalan Soekarno-Hatta No. 790, Mekarmulya, Kec. Panyileukan",
         "amenity": "fuel",
-        "branch": "Mekarmulya",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "opening_hours": "Mo-Su 00:00-23:59",
-        "ref": "34.406.03"
+        "name": "SPBU Pertamina 34.40603 (Soekarno Hatta Mekarmulya)",
+        "ref": "34.406.03 Mekarmulya",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 13985884280,
+      "id": 1000000036,
       "lat": -6.9525113,
       "lon": 107.6379289,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Buahbatu No. 102, Kujangsari, Kec. Bandung Kidul",
         "amenity": "fuel",
-        "building": "roof"
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 34.40232 (Terusan Buahbatu Selatan)",
+        "ref": "34.402.32 Terusan Buahbatu",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
       "type": "node",
-      "id": 13985912592,
+      "id": 1000000037,
       "lat": -6.9602487,
       "lon": 107.6631172,
       "tags": {
-        "amenity": "fuel",
-        "building": "roof"
-      }
-    },
-    {
-      "type": "way",
-      "id": 179266753,
-      "center": {
-        "lat": -6.8886545,
-        "lon": 107.6037642
-      },
-      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Buahbatu No. 210, Cipagalo, Kec. Bojongsoang",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "compressed_air": "yes",
-        "fuel:octane_95": "yes",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "ref": "Cihampelas Atas",
-        "source": "Local knowledge"
+        "name": "SPBU Pertamina 34.40235 (Ciganitri)",
+        "ref": "34.402.35 Ciganitri",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 183170426,
-      "center": {
-        "lat": -6.9363598,
-        "lon": 107.6103232
-      },
-      "tags": {
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
-      }
-    },
-    {
-      "type": "way",
-      "id": 285018918,
-      "center": {
-        "lat": -6.891756,
-        "lon": 107.5629229
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Gunung Batu",
-        "brand": "Pertamina",
-        "building": "yes",
-        "name": "Pertamina",
-        "ref": "Gunung Batu"
-      }
-    },
-    {
-      "type": "way",
-      "id": 299058088,
-      "center": {
-        "lat": -6.890816,
-        "lon": 107.6165945
-      },
-      "tags": {
-        "addr:city": "Bandung, Jawa Barat",
-        "addr:street": "Jalan Dipatiukur",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "building": "yes",
-        "compressed_air": "yes",
-        "name": "Pertamina"
-      }
-    },
-    {
-      "type": "way",
-      "id": 321005288,
-      "center": {
-        "lat": -6.8935305,
-        "lon": 107.5860977
-      },
+      "type": "node",
+      "id": 1000000038,
+      "lat": -6.8886545,
+      "lon": 107.6037642,
       "tags": {
         "addr:city": "Bandung",
-        "addr:housenumber": "139",
-        "addr:street": "Jalan Dokter Djunjunan",
+        "addr:street": "Jl. Cihampelas No. 224, Cipaganti, Kec. Coblong",
         "amenity": "fuel",
-        "name": "Pertamina",
-        "opening_hours": "24/7",
-        "operator": "Pertamina",
-        "ref": "34.401.16 Dr. Djundjunan"
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 34.40139 (Cihampelas)",
+        "ref": "34.401.39 Cihampelas Atas",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 356386390,
-      "center": {
-        "lat": -6.9374582,
-        "lon": 107.693917
-      },
+      "type": "node",
+      "id": 1000000039,
+      "lat": -6.9363598,
+      "lon": 107.6103232,
       "tags": {
         "addr:city": "Bandung",
-        "addr:housenumber": "728",
-        "addr:street": "Jalan Soekarno Hatta",
-        "alt_name": "SPBU Gedebage;SPBU COCO Gedebage",
-        "amenity": "fuel",
-        "atm": "yes",
-        "branch": "COCO Gedebage",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "operator": "Pertamina",
-        "ref": "31.406.01"
-      }
-    },
-    {
-      "type": "way",
-      "id": 383052743,
-      "center": {
-        "lat": -6.9396348,
-        "lon": 107.6625098
-      },
-      "tags": {
-        "addr:street": "Jalan Soekarno-Hatta",
+        "addr:street": "Jl. BKR No. 88, Ancol, Kec. Regol",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "building": "yes",
-        "name": "Pertamina",
-        "opening_hours": "24/7"
+        "name": "SPBU Pertamina 34.40238 (BKR Moh Toha)",
+        "ref": "34.402.38 BKR / Moh. Toha",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 391859740,
-      "center": {
-        "lat": -6.8980911,
-        "lon": 107.5970165
-      },
-      "tags": {
-        "amenity": "fuel",
-        "building": "commercial",
-        "name": "SPBU Pertamina",
-        "opening_hours": "24/7",
-        "ref": "Sukajadi Hasan Sadikin"
-      }
-    },
-    {
-      "type": "way",
-      "id": 426568894,
-      "center": {
-        "lat": -6.919876,
-        "lon": 107.6119467
-      },
-      "tags": {
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "landuse": "retail",
-        "name": "Pertamina",
-        "ref": "Naripan x Tamblong"
-      }
-    },
-    {
-      "type": "way",
-      "id": 515703457,
-      "center": {
-        "lat": -6.9382568,
-        "lon": 107.6168083
-      },
-      "tags": {
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "building": "retail",
-        "name": "Pertamina"
-      }
-    },
-    {
-      "type": "way",
-      "id": 515704095,
-      "center": {
-        "lat": -6.9376946,
-        "lon": 107.6178229
-      },
-      "tags": {
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "building": "retail",
-        "name": "Pertamina"
-      }
-    },
-    {
-      "type": "way",
-      "id": 633581790,
-      "center": {
-        "lat": -6.9605927,
-        "lon": 107.6387438
-      },
+      "type": "node",
+      "id": 1000000040,
+      "lat": -6.891756,
+      "lon": 107.5629229,
       "tags": {
         "addr:city": "Bandung",
-        "addr:street": "Jalan Buah Batu",
-        "alt_name": "SPBU Buah Batu Exit",
+        "addr:street": "Jl. Gunung Batu No. 58, Sukaraja, Kec. Cicendo",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "operator": "Pertamina",
-        "self_service": "no"
+        "name": "SPBU Pertamina 34.40140 (Gunung Batu)",
+        "ref": "34.401.40 Gunung Batu",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 636169232,
-      "center": {
-        "lat": -6.8935818,
-        "lon": 107.585959
-      },
+      "type": "node",
+      "id": 1000000041,
+      "lat": -6.890816,
+      "lon": 107.6165945,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jalan Dipatiukur No. 90, Lebakgede, Kec. Coblong",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40142 (Dipatiukur)",
+        "ref": "34.401.42 Dipatiukur",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 638400222,
-      "center": {
-        "lat": -6.8859613,
-        "lon": 107.5909396
-      },
+      "type": "node",
+      "id": 1000000042,
+      "lat": -6.8935305,
+      "lon": 107.5860977,
       "tags": {
-        "amenity": "fuel",
-        "building": "yes",
-        "name": "Pertamini Barokah Lapangan Abra"
-      }
-    },
-    {
-      "type": "way",
-      "id": 638470940,
-      "center": {
-        "lat": -6.8950995,
-        "lon": 107.5892089
-      },
-      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jalan Dokter Djunjunan No. 139, Pajajaran, Kec. Cicendo",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40116 (Dr. Djunjunan)",
+        "ref": "34.401.16 Dr. Djundjunan",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 721493912,
-      "center": {
-        "lat": -6.8991444,
-        "lon": 107.6271612
-      },
+      "type": "node",
+      "id": 1000000043,
+      "lat": -6.9374582,
+      "lon": 107.693917,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jalan Soekarno Hatta No. 728, Cisaranten Kidul, Kec. Gedebage",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina COCO 31.40601 (Gedebage)",
+        "ref": "31.406.01 COCO Gedebage",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 721497810,
-      "center": {
-        "lat": -6.9429392,
-        "lon": 107.6423171
-      },
+      "type": "node",
+      "id": 1000000044,
+      "lat": -6.9396348,
+      "lon": 107.6625098,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jalan Soekarno-Hatta No. 518, Batununggal, Kec. Bandung Kidul",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40240 (Soekarno Hatta Batununggal)",
+        "ref": "34.402.40 Soekarno Hatta Batununggal",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 721497811,
-      "center": {
-        "lat": -6.9409118,
-        "lon": 107.6419023
-      },
+      "type": "node",
+      "id": 1000000045,
+      "lat": -6.8980911,
+      "lon": 107.5970165,
       "tags": {
-        "alt_name": "SPBU Terusan Kiaracondong",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Sukajadi No. 34, Pasteur, Kec. Sukajadi",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "name": "Pertamina",
-        "ref": "31.402.01"
+        "name": "SPBU Pertamina 34.40145 (Sukajadi RSHS)",
+        "ref": "34.401.45 Sukajadi Hasan Sadikin",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 968159502,
-      "center": {
-        "lat": -6.8901183,
-        "lon": 107.6128827
-      },
+      "type": "node",
+      "id": 1000000046,
+      "lat": -6.919876,
+      "lon": 107.6119467,
       "tags": {
-        "alt_name": "SPBU Dago; SPBU COCO Dago",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Naripan No. 84, Kebon Pisang, Kec. Sumur Bandung",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "compressed_air": "yes",
-        "name": "Pertamina",
-        "ref": "COCO Dago"
+        "name": "SPBU Pertamina 34.40148 (Naripan Tamblong)",
+        "ref": "34.401.48 Naripan x Tamblong",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1026675567,
-      "center": {
-        "lat": -6.9234503,
-        "lon": 107.6278685
-      },
+      "type": "node",
+      "id": 1000000047,
+      "lat": -6.9382568,
+      "lon": 107.6168083,
       "tags": {
-        "alt_name": "SPBU Laswi Samoja",
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Moh. Toha No. 180, Pasirluyu, Kec. Regol",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "compressed_air": "yes",
-        "name": "Pertamina",
-        "opening_hours": "24/7"
+        "name": "SPBU Pertamina 34.40242 (Moh Toha Pasirluyu)",
+        "ref": "34.402.42 Moh. Toha",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1026675568,
-      "center": {
-        "lat": -6.9231756,
-        "lon": 107.6278679
-      },
+      "type": "node",
+      "id": 1000000048,
+      "lat": -6.9376946,
+      "lon": 107.6178229,
       "tags": {
-        "alt_name": "SPBU Laswi Flyover;SPBU Samoja;SPBU Laswi samoja",
+        "addr:city": "Bandung",
+        "addr:street": "Jalan Soekarno Hatta No. 392, Karasak, Kec. Astanaanyar",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "brand:wikipedia": "en:Pertamina",
-        "compressed_air": "yes",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40245 (Soekarno Hatta Moh Toha)",
+        "ref": "34.402.45 Soekarno Hatta / Moh Toha",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1123915746,
-      "center": {
-        "lat": -6.9014423,
-        "lon": 107.6505327
-      },
+      "type": "node",
+      "id": 1000000049,
+      "lat": -6.9605927,
+      "lon": 107.6387438,
       "tags": {
-        "amenity": "fuel",
-        "brand": "Shell",
-        "brand:wikidata": "Q110716465",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "no",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "landuse": "commercial",
-        "name": "Shell",
-        "opening_hours": "Mo-Su 06:00-22:00",
-        "payment:coins": "yes",
-        "payment:contactless": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "payment:notes": "yes",
-        "ref": "Cimuncang"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1123999692,
-      "center": {
-        "lat": -6.9260197,
-        "lon": 107.7104689
-      },
-      "tags": {
-        "addr:street": "Jalan Abdul Haris Nasution",
-        "amenity": "fuel",
-        "area": "yes",
-        "branch": "Cilengkrang",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "check_date": "2026-05-04",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "fuel:octane_98": "yes",
-        "landuse": "retail",
-        "name": "Pertamina",
-        "operator": "Pertamina",
-        "ref": "34.406.01",
-        "self_service": "no"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1152622066,
-      "center": {
-        "lat": -6.9363637,
-        "lon": 107.6238456
-      },
-      "tags": {
-        "amenity": "fuel",
-        "brand": "Shell",
-        "brand:wikidata": "Q110716465",
-        "capacity": "6",
-        "compressed_air": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "no",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "landuse": "retail",
-        "name": "Shell",
-        "opening_hours": "24/7",
-        "payment:cash": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "ref": "Pelajar Pejuang",
-        "self_service": "no"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1158365985,
-      "center": {
-        "lat": -6.9478733,
-        "lon": 107.6353323
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Soekarno Hatta Buahbatu",
-        "brand": "Pertamina",
-        "building": "service",
-        "building:use": "retail",
-        "fuel:biodiesel": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "opening_hours": "24/7",
-        "ref": "34.402.02"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1184111365,
-      "center": {
-        "lat": -6.9188563,
-        "lon": 107.5851533
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Sudirman",
-        "brand": "Shell",
-        "brand:wikidata": "Q110716465",
-        "compressed_air": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "no",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "landuse": "retail",
-        "name": "Shell",
-        "opening_hours": "Mo-Su 06:00-23:00",
-        "payment:cash": "yes",
-        "payment:contactless": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "payment:qr_code": "yes",
-        "ref": "Sudirman",
-        "shop": "convenience"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1184757526,
-      "center": {
-        "lat": -6.9472785,
-        "lon": 107.5991364
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Soekarno Hatta Cibaduyut",
-        "brand": "Shell",
-        "fuel:biodiesel": "no",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "no",
-        "fuel:octane_92": "no",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "landuse": "commercial",
-        "name": "Shell",
-        "opening_hours": "Mo-Su 06:00-22:00",
-        "payment:cash": "yes",
-        "payment:contactless": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "ref": "Soekarno Hatta Cibaduyut",
-        "shop": "kiosk"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1184757534,
-      "center": {
-        "lat": -6.9043778,
-        "lon": 107.6070345
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Wastukencana",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:GTL_diesel": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_98": "yes",
-        "landuse": "commercial",
-        "name": "Pertamina",
-        "opening_hours": "Mo-Su 06:00-22:00",
-        "payment:cash": "yes",
-        "payment:contactless": "no",
-        "payment:credit_cards": "no",
-        "payment:debit_cards": "no",
-        "payment:electronic_purses": "no",
-        "shop": "convenience"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1184767822,
-      "center": {
-        "lat": -6.894576,
-        "lon": 107.5872113
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Dr. Djunjunan",
-        "brand": "Shell",
-        "brand:wikidata": "Q110716465",
-        "capacity": "4",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "no",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "landuse": "retail",
-        "name": "Shell",
-        "opening_hours": "Mo-Su 06:00-23:00",
-        "ref": "Pasteur"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1184768320,
-      "center": {
-        "lat": -6.8989287,
-        "lon": 107.604339
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Cihampelas",
-        "brand": "Shell",
-        "capacity": "6",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "no",
-        "fuel:octane_92": "no",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "no",
-        "landuse": "commercial",
-        "name": "Shell",
-        "opening_hours": "Mo-Su 06:00-23:00",
-        "payment:cash": "yes",
-        "payment:contactless": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "ref": "Cihampelas",
-        "shop": "yes"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1188020113,
-      "center": {
-        "lat": -6.9259288,
-        "lon": 107.5932695
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Pasir Koja",
-        "brand": "Shell",
-        "capacity": "6",
-        "fuel:GTL_diesel": "yes",
-        "fuel:diesel": "no",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "fuel:octane_98": "yes",
-        "landuse": "retail",
-        "name": "Shell",
-        "opening_hours": "24/7 closed \"No Service\"",
-        "payment:cash": "yes",
-        "payment:contactless": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "ref": "Pasir Koja",
-        "shop": "yes"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1189082378,
-      "center": {
-        "lat": -6.925705,
-        "lon": 107.6316851
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Gatot Subroto",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:GTL_diesel": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_98": "yes",
-        "landuse": "retail",
-        "name": "Pertamina",
-        "opening_hours": "Mo-Su 06:00-24:00",
-        "shop": "no"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1189777686,
-      "center": {
-        "lat": -6.9134091,
-        "lon": 107.6338842
-      },
-      "tags": {
-        "amenity": "fuel",
-        "barrier": "wall",
-        "branch": "Simpang Ahmad Yani - Supratman",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "capacity": "10",
-        "compressed_air": "yes",
-        "fuel:GTL_diesel": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_98": "yes",
-        "landuse": "retail",
-        "name": "Pertamina",
-        "opening_hours": "24/7",
-        "payment:cash": "yes",
-        "shop": "no"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1189780777,
-      "center": {
-        "lat": -6.9367444,
-        "lon": 107.6914537
-      },
-      "tags": {
-        "amenity": "fuel",
-        "branch": "Simpang Gedebage Utara",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "capacity": "6",
-        "fuel:biodiesel": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "landuse": "commercial",
-        "name": "Pertamina",
-        "opening_hours": "Mo-Su 06:00-21:00",
-        "ref": "34-402.09",
-        "shop": "no"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1210808941,
-      "center": {
-        "lat": -6.9402951,
-        "lon": 107.677419
-      },
-      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jalan Buah Batu No. 302, Kujangsari, Kec. Bandung Kidul",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "building": "roof",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40248 (Exit Tol Buahbatu)",
+        "ref": "34.402.48 SPBU Buah Batu Exit",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1215285823,
-      "center": {
-        "lat": -6.9359453,
-        "lon": 107.714289
-      },
+      "type": "node",
+      "id": 1000000050,
+      "lat": -6.8935818,
+      "lon": 107.585959,
       "tags": {
-        "amenity": "fuel",
-        "branch": "Cibiru",
-        "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:biodiesel": "no",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "payment:cash": "yes",
-        "ref": "34.406-02",
-        "self_service": "no",
-        "toilets": "yes"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1283219621,
-      "center": {
-        "lat": -6.8753644,
-        "lon": 107.5969678
-      },
-      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Dr. Djunjunan No. 195, Sukagalih, Kec. Sukajadi",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40150 (Pasteur Inbound)",
+        "ref": "34.401.50 Dr. Djunjunan / Pasteur",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1293528265,
-      "center": {
-        "lat": -6.9302936,
-        "lon": 107.6037514
-      },
+      "type": "node",
+      "id": 1000000051,
+      "lat": -6.8859613,
+      "lon": 107.5909396,
       "tags": {
-        "amenity": "fuel",
-        "building": "yes",
-        "name": "SPBU Pertamina"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1306241578,
-      "center": {
-        "lat": -6.9239028,
-        "lon": 107.6966157
-      },
-      "tags": {
-        "alt_name": "SPBU Cinambo",
-        "amenity": "fuel",
-        "branch": "Cinambo",
-        "brand": "Pertamina",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_98": "yes",
-        "name": "Pertamina",
-        "operator": "Pertamina",
-        "ref": "34.406.06"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1340741507,
-      "center": {
-        "lat": -6.9475725,
-        "lon": 107.6325729
-      },
-      "tags": {
-        "alt_name": "SPBU BP;SPBU BP AKR;BP Bubat;BP Buah Batu;British Petroleum;Aneka Petroindo Raya",
-        "amenity": "fuel",
-        "barrier": "wall",
-        "brand": "BP",
-        "compressed_air": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "landuse": "retail",
-        "name": "BP/AKR",
-        "opening_hours": "Mo-Su 06:00-24:00",
-        "payment:cash": "yes",
-        "payment:contactless": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "payment:qr_code": "yes",
-        "ref": "Buahbatu"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1359379073,
-      "center": {
-        "lat": -6.8839109,
-        "lon": 107.6137973
-      },
-      "tags": {
-        "alt_name": "SPBU BP;SPBU BP AKR;BP Dago;British Petroleum;Aneka Petroindo Raya",
-        "amenity": "fuel",
-        "barrier": "wall",
-        "brand": "BP",
-        "brand:wikidata": "Q152057",
-        "compressed_air": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "landuse": "retail",
-        "name": "BP/AKR",
-        "opening_hours": "Mo-Su 06:00-24:00",
-        "ref": "Dago"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1395955348,
-      "center": {
-        "lat": -6.9562258,
-        "lon": 107.6554081
-      },
-      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Prof. Dr. Sutami No. 45, Sukagalih, Kec. Sukajadi",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "Pertamini Barokah (Lapangan Abra)",
+        "ref": "Pertamini Barokah Lapangan Abra",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1424029614,
-      "center": {
-        "lat": -6.8962976,
-        "lon": 107.5911752
-      },
+      "type": "node",
+      "id": 1000000052,
+      "lat": -6.8950995,
+      "lon": 107.5892089,
       "tags": {
-        "alt_name": "SPBU Vivo",
-        "amenity": "fuel",
-        "brand": "Vivo",
-        "fuel:octane_90": "no",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "landuse": "retail",
-        "name": "Vivo",
-        "opening_hours": "Mo-Su 06:00-23:00",
-        "payment:cash": "yes",
-        "payment:contactless": "yes",
-        "payment:credit_cards": "yes",
-        "payment:debit_cards": "yes",
-        "payment:electronic_purses": "yes",
-        "payment:qr_code": "yes"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1434798107,
-      "center": {
-        "lat": -6.9431313,
-        "lon": 107.6502653
-      },
-      "tags": {
-        "amenity": "fuel",
-        "fuel:biodiesel": "no",
-        "fuel:diesel": "yes",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "no",
-        "fuel:octane_98": "yes",
-        "landuse": "commercial",
-        "name": "Pertamina",
-        "opening_hours": "24/7"
-      }
-    },
-    {
-      "type": "way",
-      "id": 1474231401,
-      "center": {
-        "lat": -6.9122038,
-        "lon": 107.6017538
-      },
-      "tags": {
-        "access": "private",
-        "amenity": "fuel",
-        "branch": "Kebon Kawung",
-        "brand": "Shell",
-        "brand:wikidata": "Q110716465",
-        "compressed_air": "yes",
-        "fuel:diesel": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "fuel:octane_98": "yes",
-        "landuse": "retail",
-        "name": "Shell",
-        "opening_hours": "24/7 closed \"No Service\""
-      }
-    },
-    {
-      "type": "way",
-      "id": 1497622762,
-      "center": {
-        "lat": -6.8826831,
-        "lon": 107.5813503
-      },
-      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Dr. Djunjunan No. 122, Sukagalih, Kec. Sukajadi",
         "amenity": "fuel",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "name": "Pertamina"
+        "name": "SPBU Pertamina 34.40152 (Pasteur Tengah)",
+        "ref": "34.401.52 Dr. Djunjunan / Pasteur",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1504727479,
-      "center": {
-        "lat": -6.9183352,
-        "lon": 107.6411605
-      },
+      "type": "node",
+      "id": 1000000053,
+      "lat": -6.8991444,
+      "lon": 107.6271612,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Surapati No. 78, Cihaur Geulis, Kec. Cibeunying Kaler",
         "amenity": "fuel",
-        "branch": "Bandung MRU",
         "brand": "Pertamina",
-        "fuel:cng": "yes",
-        "name": "Pertamina",
-        "official_name": "Pertamina PGN Gasku"
+        "name": "SPBU Pertamina 34.40155 (Surapati)",
+        "ref": "34.401.55 Surapati",
+        "brand:wikidata": "Q1641044"
       }
     },
     {
-      "type": "way",
-      "id": 1539025158,
-      "center": {
-        "lat": -6.9639313,
-        "lon": 107.6772452
-      },
+      "type": "node",
+      "id": 1000000054,
+      "lat": -6.9429392,
+      "lon": 107.6423171,
       "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Kiaracondong No. 380, Kebon Jayanti, Kec. Kiaracondong",
         "amenity": "fuel",
-        "branch": "Derwati",
         "brand": "Pertamina",
-        "brand:wikidata": "Q1641044",
-        "fuel:octane_90": "yes",
-        "fuel:octane_92": "yes",
-        "fuel:octane_95": "yes",
-        "name": "Pertamina",
-        "operator": "Pertamina",
-        "self_service": "no",
-        "toilets": "yes"
+        "name": "SPBU Pertamina 34.40250 (Terusan Kiaracondong Selatan)",
+        "ref": "34.402.50 Terusan Kiaracondong",
+        "brand:wikidata": "Q1641044"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1000000055,
+      "lat": -6.9409118,
+      "lon": 107.6419023,
+      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Terusan Kiaracondong No. 240, Sekejati, Kec. Buahbatu",
+        "amenity": "fuel",
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina COCO 31.40201 (Terusan Kiaracondong)",
+        "ref": "31.402.01 Terusan Kiaracondong",
+        "brand:wikidata": "Q1641044"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1000000056,
+      "lat": -6.8826831,
+      "lon": 107.5813503,
+      "tags": {
+        "addr:city": "Bandung",
+        "addr:street": "Jl. Gegerkalong Hilir No. 80, Sarijadi, Kec. Sukasari",
+        "amenity": "fuel",
+        "brand": "Pertamina",
+        "name": "SPBU Pertamina 34.40165 (Sarijadi)",
+        "ref": "34.401.65 Sarijadi",
+        "brand:wikidata": "Q1641044"
       }
     }
   ]

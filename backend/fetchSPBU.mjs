@@ -41,12 +41,12 @@ async function fetchSPBU() {
             JSON.stringify(data, null, 2)
         );
 
-        console.log("✅ Data berhasil diambil!");
-        console.log(`📍 Jumlah lokasi: ${data.elements.length}`);
-        console.log("💾 Disimpan sebagai: spbu-bandung.json");
+        console.log("Data berhasil diambil!");
+        console.log(`Jumlah lokasi: ${data.elements.length}`);
+        console.log("Disimpan sebagai: spbu-bandung.json");
 
     } catch (error) {
-        console.error("❌ Gagal mengambil data:", error.message);
+        console.error("Gagal mengambil data:", error.message);
     }
 }
 

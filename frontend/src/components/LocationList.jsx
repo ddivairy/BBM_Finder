@@ -1,7 +1,11 @@
-
 import {MapPin} from 'lucide-react';
 
-export default function LocationList({ lokasiList, loading, selectedLokasi, onSelectLokasi }) {
+export default function LocationList({
+  lokasiList, 
+  loading, 
+  selectedLokasi, 
+  onSelectLokasi 
+}) {
   if (loading) {
     return <div className="p-8 text-center text-xs text-gray-400">Memuat data lokasi...</div>;
   }
@@ -14,6 +18,7 @@ export default function LocationList({ lokasiList, loading, selectedLokasi, onSe
     );
   }
 
+  // Kotak utama daftar lokasi SPBU
   return (
     <div className="space-y-3 h-[460px] overflow-y-auto pr-2 pb-4 scrollbar-thin">
       {lokasiList.map((item) => (
@@ -26,6 +31,8 @@ export default function LocationList({ lokasiList, loading, selectedLokasi, onSe
             : 'border-gray-200 dark:border-gray-700'
         }`}
         >
+
+          {/* Baris atas kotak */}
           <div className="flex justify-between items-start gap-2">
             <h3 className="font-bold text-sm text-gray-900 dark:text-white">
             {item.nama}
@@ -51,8 +58,10 @@ export default function LocationList({ lokasiList, loading, selectedLokasi, onSe
             </span>
           </div>
 
+          {/* Baris tengah kotak */}
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 line-clamp-1">{item.alamat || 'Alamat belum diatur'}</p>
 
+          {/* Baris bawah kotak */}
           <div className="flex items-center justify-between mt-3 pt-2 border-t border-gray-100 dark:border-gray-700">
             <div className="flex flex-wrap gap-1">
               {item.tipe_bensin.map((bensin, idx) => (

@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Fix ikon marker Leaflet
+// Fix icon kayak di MapView
 const markerIcon = new L.Icon({
   iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
@@ -20,7 +20,9 @@ function LocationPicker({ position, setPosition }) {
     },
   });
 
-return position ? <Marker position={position} icon={markerIcon} /> : null;
+return position 
+? <Marker position={position} icon={markerIcon} /> 
+: null;
 }
 
 const pilihanBensin = [
@@ -32,7 +34,11 @@ const pilihanBensin = [
   'Pertamina Dex',
 ];
 
-export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
+export default function AddLocationModal({
+  isOpen, 
+  onClose, 
+  onSuccess 
+}) {
   const [formData, setFormData] = useState({
     nama: '',
     kategori: 'spbu',
@@ -80,7 +86,7 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
     setLoading(true);
 
     try {
-      // DATA YANG SESUAI DENGAN BACKEND
+      // Data disesuaikan dengan backend
       const payload = {
         nama: formData.nama,
         kategori: formData.kategori,
@@ -136,29 +142,26 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
     }
   };
 
+  // Tampilan modal
   return (
     <AnimatePresence>
       {isOpen && (
     <motion.div
-
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.2 }}
-    
-    className="fixed inset-0 z-50 overflow-y-auto bg-black/50 backdrop-blur-xs p-4 sm:p-6 flex justify-center items-start">
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="fixed inset-0 z-50 overflow-y-auto bg-black/50 backdrop-blur-xs p-4 sm:p-6 flex justify-center items-start">
 
       <motion.div
-      
-      initial={{ opacity: 0, y: 30, scale: 0.98 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: 20, scale: 0.98 }}
-      transition={{
-        duration: 0.3,
-        ease: "easeOut"
-      }}
-      
-      className="bg-white dark:bg-gray-900 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-gray-100 dark:border-gray-800 my-auto transition-colors">
+        initial={{ opacity: 0, y: 30, scale: 0.98 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        exit={{ opacity: 0, y: 20, scale: 0.98 }}
+        transition={{
+          duration: 0.3,
+          ease: "easeOut"
+        }}
+        className="bg-white dark:bg-gray-900 rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-gray-100 dark:border-gray-800 my-auto transition-colors">
 
         {/* Header */}
         <div className="space-y-1 mb-6">
@@ -201,7 +204,7 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
                 })
               }
               className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
-            />
+              />
           </div>
 
           {/* Jenis Titik & Harga */}
@@ -252,7 +255,6 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
-
           </div>
 
           {/* Jenis BBM */}
@@ -370,7 +372,6 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
                 className="w-full px-3.5 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
               />
             </div>
-
           </div>
 
           {/* Peta */}
@@ -417,7 +418,6 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
               </MapContainer>
 
             </div>
-
           </div>
 
           {/* Foto */}
@@ -433,7 +433,6 @@ export default function AddLocationModal({ isOpen, onClose, onSuccess }) {
             <div className="border-2 border-dashed border-gray-200 dark:border-gray-700 rounded-2xl p-4 text-center text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 cursor-pointer transition">
               Unggah foto opsional atau klik untuk memilih
             </div>
-
           </div>
 
           {/* Catatan */}

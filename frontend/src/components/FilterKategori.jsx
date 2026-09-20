@@ -30,7 +30,7 @@ export default function FilterKategori({
         </button>
       ))}
 
-      {/* Filter Jarak */}
+      {/* Filter Jarak - Dropdown */}
       <select
         value={filterJarak}
         onChange={(e) => setFilterJarak(e.target.value)}
