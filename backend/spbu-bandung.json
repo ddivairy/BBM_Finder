@@ -1,850 +1,1943 @@
 {
   "version": 0.6,
-  "generator": "Overpass API 0.7.62.11 87bfad18",
-  "osm3s": {
-    "timestamp_osm_base": "2026-09-17T06:59:44Z",
-    "timestamp_areas_base": "2026-09-16T05:04:09Z",
-    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
-  },
+  "generator": "BBM Finder",
   "elements": [
     {
       "type": "node",
-      "id": 1000000001,
-      "lat": -6.93285769,
-      "lon": 107.6280044,
-      "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Buah Batu No. 235, Turangga, Kec. Lengkong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40227 (Buah Batu)",
-        "ref": "34.402.27 Buah Batu",
-        "brand:wikidata": "Q1641044"
-      }
-    },
-    {
-      "type": "node",
-      "id": 1000000002,
+      "id": 29392017,
       "lat": -6.8876837,
       "lon": 107.6020333,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Cipaganti No. 138, Pasirkaliki, Kec. Cicendo",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40116 (Cipaganti)",
-        "ref": "34.401.16 Cipaganti Atas",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cipaganti Atas",
+        "kategori": "spbu",
+        "alamat": "Jl. Cipaganti, Pasteur, Kec. Sukajadi, Kota Bandung, Jawa Barat 40161",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000003,
+      "id": 29392645,
       "lat": -6.9070048,
       "lon": 107.5858523,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Pajajaran No. 132, Pajajaran, Kec. Cicendo",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40115 (Husen Sastranegara)",
-        "ref": "34.401.15 Husen Sastranegara",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Husen Sastranegara",
+        "kategori": "spbu",
+        "alamat": "Jl. Pajajaran, Husen Sastranegara, Kec. Cicendo, Kota Bandung, Jawa Barat 40174",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000004,
+      "id": 32520380,
       "lat": -6.8997316,
       "lon": 107.6343231,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Pahlawan No. 71, Cikutra, Kec. Cibeunying Kidul",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40114 (Pahlawan)",
-        "ref": "34.401.14 Pahlawan",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina 34.401.14 Pahlawan",
+        "kategori": "spbu",
+        "alamat": "Jalan Pahlawan, Cikutra, Cibeunying Kidul, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Dexlite"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000005,
+      "id": 32529107,
       "lat": -6.8806043,
       "lon": 107.5987095,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Dr. Setiabudi No. 170, Gegerkalong, Kec. Sukasari",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40111 (Setiabudhi)",
-        "ref": "34.401.11 Dr. Setiabudhi",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Dr. Setiabudhi",
+        "kategori": "spbu",
+        "alamat": "Jl. Dr. Setiabudhi, Hegarmanah, Kec. Cidadap, Kota Bandung, Jawa Barat 40141",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000006,
+      "id": 32529115,
       "lat": -6.9185944,
       "lon": 107.5840572,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Jend. Sudirman No. 581, Dungus Cariang, Kec. Andir",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40108 (Sudirman)",
-        "ref": "34.401.08 Sudirman",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Sudirman",
+        "kategori": "spbu",
+        "alamat": "Jl. Jend. Sudirman, Dungus Cariang, Kec. Andir, Kota Bandung, Jawa Barat 40183",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000007,
+      "id": 1107877728,
       "lat": -6.9165401,
       "lon": 107.6184175,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Sunda No. 83, Kebon Pisang, Kec. Sumur Bandung",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40110 (Sunda)",
-        "ref": "34.401.10 Sunda / Gudang Selatan",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Sunda / Gudang Selatan",
+        "kategori": "spbu",
+        "alamat": "Jl. Sunda, Kebon Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40112",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000008,
+      "id": 1781964169,
       "lat": -6.9669124,
       "lon": 107.6814323,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Tol Purbaleunyi KM 149, Tegalluar, Kec. Buahbatu",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 33.40201 (Rest Area Tol Purbaleunyi KM 149)",
-        "ref": "33.402.01 Purbaleunyi 149",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Rest Area Purbaleunyi KM 149",
+        "kategori": "spbu",
+        "alamat": "Tol Padaleunyi KM 149, Tegalluar, Kec. Buahbatu, Kota Bandung, Jawa Barat 40287",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000009,
+      "id": 1956516948,
       "lat": -6.8689864,
       "lon": 107.6208132,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Ir. H. Juanda No. 364, Dago, Kec. Coblong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina COCO 31.40101 (Dago Atas)",
-        "ref": "31.401.01 COCO Dago Atas",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina COCO Dago Atas",
+        "kategori": "spbu",
+        "alamat": "Jl. Ir. H. Juanda No. 364, Dago, Kec. Coblong, Kota Bandung, Jawa Barat 40135",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Dexlite"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000010,
+      "id": 2016380280,
       "lat": -6.8890673,
       "lon": 107.5816606,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Dr. Djunjunan No. 139, Sukagalih, Kec. Sukajadi",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40118 (Surya Sumantri)",
-        "ref": "34.401.18 Surya Sumantri Babakan Jeruk",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Surya Sumantri Babakan Jeruk",
+        "kategori": "spbu",
+        "alamat": "Jl. Prof. Dr. Surya Sumantri, Sukawarna, Kec. Sukajadi, Kota Bandung, Jawa Barat 40164",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000011,
+      "id": 2500443120,
       "lat": -6.9492397,
       "lon": 107.625816,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Buah Batu No. 25, Cijagra, Kec. Lengkong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40205 (Cijagra)",
-        "ref": "34.402.05 SPBU Cijagra",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cijagra",
+        "kategori": "spbu",
+        "alamat": "Jl. Buah Batu No. 235, Cijagra, Kec. Lengkong, Kota Bandung, Jawa Barat 40265",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000012,
+      "id": 2500443121,
       "lat": -6.9548757,
       "lon": 107.6117403,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Moh. Toha No. 352, Mengger, Kec. Bandung Kidul",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40212 (Mengger)",
-        "ref": "34.402.12 Mengger / Moh. Toha",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Mengger Pasir Luyu",
+        "kategori": "spbu",
+        "alamat": "Jl. Pasirluyu, Pasirluyu, Kec. Regol, Kota Bandung, Jawa Barat 40254",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000013,
+      "id": 2701279836,
       "lat": -6.8910576,
       "lon": 107.6256199,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Sadang Serang No. 12, Sekeloa, Kec. Coblong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40120 (Sadang Serang)",
-        "ref": "34.401.20 Terminal Sadang Serang",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Terminal Sadang Serang",
+        "kategori": "spbu",
+        "alamat": "Jl. Sadang Serang, Sekeloa, Kec. Coblong, Kota Bandung, Jawa Barat 40134",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000014,
+      "id": 3426583579,
       "lat": -6.9045444,
       "lon": 107.6734695,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. A.H. Nasution No. 112, Sukamiskin, Kec. Arcamanik",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40208 (Sukamiskin)",
-        "ref": "34.402.08 Sukamiskin",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Sukamiskin",
+        "kategori": "spbu",
+        "alamat": "Jalan A.H Nasution, Sukamiskin, Kec. Arcamanik, Kota Bandung, Jawa Barat 40293",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000015,
+      "id": 3426585961,
       "lat": -6.9289714,
       "lon": 107.7120823,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. A.H. Nasution No. 248, Cipadung, Kec. Panyileukan",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40602 (Cipadung)",
-        "ref": "34.406.02 Embah Jaksa Cipadung",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Embah Jaksa Cipadung",
+        "kategori": "spbu",
+        "alamat": "Jl. Embah Jaksa, Cipadung, Kec. Panyileukan, Kota Bandung, Jawa Barat 40614",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000016,
+      "id": 3429603357,
       "lat": -6.9057833,
       "lon": 107.6185972,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. LLRE Martadinata No. 120, Cihapit, Kec. Bandung Wetan",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40106 (Riau / Martadinata)",
-        "ref": "34.401.06 Riau / Merdeka",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Riau Katamso",
+        "kategori": "spbu",
+        "alamat": "Jl. L. R. E. Martadinata No. 215, Cihapit, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40114",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000017,
+      "id": 4143020532,
       "lat": -6.9223889,
       "lon": 107.6440384,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Jakarta No. 42, Babakan Surabaya, Kec. Kiaracondong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40215 (Babakan Surabaya)",
-        "ref": "34.402.15 Babakan Daese",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Babakan Daese",
+        "kategori": "spbu",
+        "alamat": "Jl. Ibrahim Adjie, Babakan Surabaya, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000018,
+      "id": 4143041693,
       "lat": -6.9136217,
       "lon": 107.6517728,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Purwakarta No. 108, Antapani Tengah, Kec. Antapani",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40218 (Purwakarta Antapani)",
-        "ref": "34.402.18 Purwakarta",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Purwakarta",
+        "kategori": "spbu",
+        "alamat": "Jalan Purwakarta, Antapani Tengah, Kec. Antapani, Kota Bandung, Jawa Barat 40291",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000019,
+      "id": 4143047589,
       "lat": -6.9183776,
       "lon": 107.644464,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Ibrahim Adjie No. 162, Kebonwaru, Kec. Batununggal",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40220 (Kiaracondong)",
-        "ref": "34.402.20 Soma Kiaracondong",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Soma Kiaracondong",
+        "kategori": "spbu",
+        "alamat": "Jalan Raya Kiara Condong, Babakan Surabaya, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000020,
+      "id": 4143049089,
       "lat": -6.9136483,
       "lon": 107.6589018,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Jakarta No. 182, Antapani Tengah, Kec. Antapani",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40222 (Terusan Jakarta)",
-        "ref": "34.402.22 Terusan Jakarta",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Terusan Jakarta",
+        "kategori": "spbu",
+        "alamat": "Jalan Terusan Jakarta, Antapani Tengah, Kec. Antapani, Kota Bandung, Jawa Barat 40291",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000021,
+      "id": 4327908913,
       "lat": -6.9129281,
       "lon": 107.5746074,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Rajawali Barat No. 89, Maleber, Kec. Andir",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40122 (Rajawali)",
-        "ref": "34.401.22 Rajawali Barat",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Rajawali Barat",
+        "kategori": "spbu",
+        "alamat": "Jl. Rajawali Barat, Maleber, Kec. Andir, Kota Bandung, Jawa Barat 40184",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000022,
+      "id": 4329578164,
       "lat": -6.8992841,
       "lon": 107.6419203,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Cikutra No. 201, Neglasari, Kec. Cibeunying Kaler",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40103 (Cikutra Atas)",
-        "ref": "34.401.03 Cikutra",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina 34.401.03 Cikutra",
+        "kategori": "spbu",
+        "alamat": "Jl. Cikutra No. 182, Cikutra, Kec. Cibeunying Kidul, Kota Bandung, Jawa Barat 40124",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000023,
+      "id": 5108763054,
       "lat": -6.9266538,
       "lon": 107.5748775,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Pasirkoja No. 230, Babakan, Kec. Babakan Ciparay",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40125 (Pasirkoja Exit)",
-        "ref": "34.401.25 Pasirkoja Exit Tol",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Jamika Holis",
+        "kategori": "spbu",
+        "alamat": "Jl. Jamika, Jamika, Kec. Bojongloa Kaler, Kota Bandung, Jawa Barat 40231",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000024,
+      "id": 5177959021,
       "lat": -6.9138016,
       "lon": 107.6951878,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Pacantel No. 45, Cisaranten Kulon, Kec. Arcamanik",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40226 (Arcamanik)",
-        "ref": "34.402.26 Arcamanik",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cisaranten Kulon",
+        "kategori": "spbu",
+        "alamat": "Jl. Cisaranten Kulon, Cisaranten Kulon, Kec. Arcamanik, Kota Bandung, Jawa Barat 40293",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000025,
+      "id": 5268872144,
       "lat": -6.9522858,
       "lon": 107.6379847,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Terusan Buah Batu No. 55, Sekelimus, Kec. Buahbatu",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40266 (Terusan Buahbatu)",
-        "ref": "34.402.66 Sekelimus Buahbatu",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Sekelimus Buahbatu",
+        "kategori": "spbu",
+        "alamat": "Jalan Terusan Buah Batu No. 55, Sekelimus, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40266",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000026,
+      "id": 5794030254,
       "lat": -6.9041715,
       "lon": 107.6650947,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Golf West No. 18, Cisaranten Bina Harapan, Kec. Arcamanik",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40228 (Golf Arcamanik)",
-        "ref": "34.402.28 Arcamanik Endah",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Arcamanik Endah",
+        "kategori": "spbu",
+        "alamat": "Jl. Arcamanik Endah, Sukamiskin, Kec. Arcamanik, Kota Bandung, Jawa Barat 40293",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000027,
+      "id": 6788925186,
       "lat": -6.9413633,
       "lon": 107.5820851,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Caringin No. 102, Babakan, Kec. Babakan Ciparay",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40129 (Caringin)",
-        "ref": "34.401.29 Jamika / Caringin",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Kopo Cirangrang",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Kopo No. 482, Cirangrang, Kec. Babakan Ciparay, Kota Bandung, Jawa Barat 40227",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000028,
+      "id": 10166346703,
       "lat": -6.8567704,
       "lon": 107.5930499,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Gegerkalong Hilir No. 142, Isola, Kec. Sukasari",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "Pertashop Pertamina 3P.40102 (Gegerkalong Hilir)",
-        "ref": "3P.40102 Gegerkalong",
-        "brand:wikidata": "Q1641044"
+        "nama": "Pertashop 3P.40102 Ledeng",
+        "kategori": "pertashop",
+        "alamat": "Jl. Dr. Setiabudhi, Ledeng, Kec. Cidadap, Kota Bandung, Jawa Barat 40154",
+        "tipe_bensin": ["Pertamax"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000029,
+      "id": 11050346382,
       "lat": -6.9121984,
       "lon": 107.6370205,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Brigdir Jend. Katamso No. 64, Cihaur Geulis, Kec. Cibeunying Kaler",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40131 (Brigjen Katamso)",
-        "ref": "34.401.31 Katamso",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Katamso Supratman",
+        "kategori": "spbu",
+        "alamat": "Jl. Brigdir Jend. Katamso, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000030,
+      "id": 11337326908,
       "lat": -6.9141507,
       "lon": 107.5708193,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Elang Raya No. 2, Maleber, Kec. Andir",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40133 (Elang Cibeureum)",
-        "ref": "34.401.33 Elang / Cibeureum",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Kebon Jeruk Elang",
+        "kategori": "spbu",
+        "alamat": "Jl. Elang Raya, Maleber, Kec. Andir, Kota Bandung, Jawa Barat 40184",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000031,
+      "id": 11869631702,
       "lat": -6.9294651,
       "lon": 107.579498,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Pasirkoja No. 112, Sukahaji, Kec. Babakan Ciparay",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40135 (Terusan Pasirkoja)",
-        "ref": "34.401.35 Terusan Pasirkoja",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Terusan Pasirkoja",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Pasirkoja, Sukahaji, Kec. Babakan Ciparay, Kota Bandung, Jawa Barat 40221",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000032,
+      "id": 11869640786,
       "lat": -6.9224243,
       "lon": 107.6306979,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Laswi No. 42, Kacapiring, Kec. Batununggal",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40230 (Laswi)",
-        "ref": "34.402.30 SPBU Laswi",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Laswi",
+        "kategori": "spbu",
+        "alamat": "Jl. Laswi No. 34, Kacapiring, Kec. Batununggal, Kota Bandung, Jawa Barat 40271",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000033,
+      "id": 11869686069,
       "lat": -6.8936046,
       "lon": 107.5859941,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Dr. Djunjunan No. 220, Sukagalih, Kec. Sukajadi",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40136 (Pasteur Outbound)",
-        "ref": "34.401.36 Pasteur Outbound",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Pasteur Djunjunan",
+        "kategori": "spbu",
+        "alamat": "Jl. Dr. Djunjunan, Pajajaran, Kec. Cicendo, Kota Bandung, Jawa Barat 40173",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000034,
+      "id": 12639916346,
       "lat": -6.9295816,
       "lon": 107.5776794,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Pasirkoja No. 178, Jamika, Kec. Bojongloa Kaler",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40138 (Pasirkoja Selatan)",
-        "ref": "34.401.38 Pasirkoja",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Babakan Ciparay",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Pasirkoja, Babakan, Kec. Babakan Ciparay, Kota Bandung, Jawa Barat 40222",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000035,
+      "id": 13796130757,
       "lat": -6.9362243,
       "lon": 107.7006288,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Soekarno-Hatta No. 790, Mekarmulya, Kec. Panyileukan",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40603 (Soekarno Hatta Mekarmulya)",
-        "ref": "34.406.03 Mekarmulya",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina 34.406.03 Mekarmulya",
+        "kategori": "spbu",
+        "alamat": "Jalan Soekarno-Hatta, Mekarmulya, Kec. Panyileukan, Kota Bandung, Jawa Barat 40614",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "00:00-23:59",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000036,
+      "id": 13985884280,
       "lat": -6.9525113,
       "lon": 107.6379289,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Buahbatu No. 102, Kujangsari, Kec. Bandung Kidul",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40232 (Terusan Buahbatu Selatan)",
-        "ref": "34.402.32 Terusan Buahbatu",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Terusan Buah Batu",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Buah Batu, Sekelimus, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40266",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000037,
+      "id": 13985912592,
       "lat": -6.9602487,
       "lon": 107.6631172,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Buahbatu No. 210, Cipagalo, Kec. Bojongsoang",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40235 (Ciganitri)",
-        "ref": "34.402.35 Ciganitri",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cipamokolan",
+        "kategori": "spbu",
+        "alamat": "Jl. Soekarno-Hatta, Cipamokolan, Kec. Rancasari, Kota Bandung, Jawa Barat 40292",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 179266753,
+      "center": {
+        "lat": -6.8886545,
+        "lon": 107.6037642
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Cihampelas Atas",
+        "kategori": "spbu",
+        "alamat": "Jl. Cihampelas No. 240, Cipaganti, Kec. Coblong, Kota Bandung, Jawa Barat 40131",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Green 95", "Pertamax Turbo"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 183170426,
+      "center": {
+        "lat": -6.9363598,
+        "lon": 107.6103232
+      },
+      "tags": {
+        "nama": "SPBU Pertamina BKR Tegalega",
+        "kategori": "spbu",
+        "alamat": "Jl. BKR, Pelindung Hewan, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40243",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 285018918,
+      "center": {
+        "lat": -6.891756,
+        "lon": 107.5629229
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Gunung Batu",
+        "kategori": "spbu",
+        "alamat": "Jl. Gunung Batu, Sukaraja, Kec. Cicendo, Kota Bandung, Jawa Barat 40175",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 299058088,
+      "center": {
+        "lat": -6.890816,
+        "lon": 107.6165945
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Dipatiukur",
+        "kategori": "spbu",
+        "alamat": "Jalan Dipatiukur, Lebakgede, Kec. Coblong, Kota Bandung, Jawa Barat 40132",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 321005288,
+      "center": {
+        "lat": -6.8935305,
+        "lon": 107.5860977
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.401.16 Dr. Djundjunan",
+        "kategori": "spbu",
+        "alamat": "Jalan Dokter Djunjunan No. 139, Pajajaran, Cicendo, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 356386390,
+      "center": {
+        "lat": -6.9374582,
+        "lon": 107.693917
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 31.406.01 COCO Gedebage",
+        "kategori": "spbu",
+        "alamat": "Jalan Soekarno Hatta No. 728, Cisaranten Endah, Arcamanik, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Green 95", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 383052743,
+      "center": {
+        "lat": -6.9396348,
+        "lon": 107.6625098
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Soekarno-Hatta Batununggal",
+        "kategori": "spbu",
+        "alamat": "Jalan Soekarno-Hatta, Batununggal, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40266",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391859740,
+      "center": {
+        "lat": -6.8980911,
+        "lon": 107.5970165
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Sukajadi Hasan Sadikin",
+        "kategori": "spbu",
+        "alamat": "Jl. Sukajadi No. 120, Pasteur, Kec. Sukajadi, Kota Bandung, Jawa Barat 40161",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 426568894,
+      "center": {
+        "lat": -6.919876,
+        "lon": 107.6119467
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Naripan x Tamblong",
+        "kategori": "spbu",
+        "alamat": "Jl. Naripan No. 80, Kebon Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40112",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 515703457,
+      "center": {
+        "lat": -6.9382568,
+        "lon": 107.6168083
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Sriwijaya Peta",
+        "kategori": "spbu",
+        "alamat": "Jl. Peta, Cigereleng, Kec. Regol, Kota Bandung, Jawa Barat 40253",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 515704095,
+      "center": {
+        "lat": -6.9376946,
+        "lon": 107.6178229
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Peta Regol",
+        "kategori": "spbu",
+        "alamat": "Jl. Peta, Ancol, Kec. Regol, Kota Bandung, Jawa Barat 40254",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 633581790,
+      "center": {
+        "lat": -6.9605927,
+        "lon": 107.6387438
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Buah Batu Exit",
+        "kategori": "spbu",
+        "alamat": "Jalan Buah Batu, Kujangsari, Kec. Bandung Kidul, Bandung",
+        "tipe_bensin": ["Pertamax", "Pertamax Green 95", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 636169232,
+      "center": {
+        "lat": -6.8935818,
+        "lon": 107.585959
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Djunjunan Pasteur",
+        "kategori": "spbu",
+        "alamat": "Jl. Dr. Djunjunan, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40163",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 638400222,
+      "center": {
+        "lat": -6.8859613,
+        "lon": 107.5909396
+      },
+      "tags": {
+        "nama": "Pertamini Barokah Lapangan Abra",
+        "kategori": "spbu",
+        "alamat": "Jl. Gegerkalongsari, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat 40153",
+        "tipe_bensin": ["Pertalite"],
+        "jam_operasi": "06:00-22:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 638470940,
+      "center": {
+        "lat": -6.8950995,
+        "lon": 107.5892089
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Sukajadi Pasteur",
+        "kategori": "spbu",
+        "alamat": "Jl. Sukajadi, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40163",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 721493912,
+      "center": {
+        "lat": -6.8991444,
+        "lon": 107.6271612
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Surapati Kalikutra",
+        "kategori": "spbu",
+        "alamat": "Jl. Surapati, Sukaluyu, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40123",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 721497810,
+      "center": {
+        "lat": -6.9429392,
+        "lon": 107.6423171
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Terusan Kiaracondong Selatan",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Kiaracondong, Kebon Jayanti, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 721497811,
+      "center": {
+        "lat": -6.9409118,
+        "lon": 107.6419023
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 31.402.01 Terusan Kiaracondong",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Kiaracondong, Kebon Kangkung, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40284",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 968159502,
+      "center": {
+        "lat": -6.8901183,
+        "lon": 107.6128827
+      },
+      "tags": {
+        "nama": "SPBU Pertamina COCO Dago",
+        "kategori": "spbu",
+        "alamat": "Jl. Ir. H. Juanda No. 129, LebakSiliwangi, Kec. Coblong, Kota Bandung, Jawa Barat 40132",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1026675567,
+      "center": {
+        "lat": -6.9234503,
+        "lon": 107.6278685
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Laswi Samoja",
+        "kategori": "spbu",
+        "alamat": "Jl. Laswi, Samoja, Kec. Batununggal, Kota Bandung, Jawa Barat 40273",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1026675568,
+      "center": {
+        "lat": -6.9231756,
+        "lon": 107.6278679
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Laswi Flyover",
+        "kategori": "spbu",
+        "alamat": "Jl. Laswi Flyover Samoja, Kec. Batununggal, Kota Bandung, Jawa Barat 40273",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1123915746,
+      "center": {
+        "lat": -6.9014423,
+        "lon": 107.6505327
+      },
+      "tags": {
+        "nama": "SPBU Shell Cimuncang",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Jakarta, Cimuncang, Kec. Cibeunying Kidul, Kota Bandung, Jawa Barat 40125",
+        "tipe_bensin": ["Shell V-Power", "Shell V-Power Diesel"],
+        "jam_operasi": "06:00-22:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1123999692,
+      "center": {
+        "lat": -6.9260197,
+        "lon": 107.7104689
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.406.01 Cilengkrang",
+        "kategori": "spbu",
+        "alamat": "Jalan Abdul Haris Nasution, Cisurupan, Kec. Cibiru, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Green 95", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-05-04"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1152622066,
+      "center": {
+        "lat": -6.9363637,
+        "lon": 107.6238456
+      },
+      "tags": {
+        "nama": "SPBU Shell Pelajar Pejuang",
+        "kategori": "spbu",
+        "alamat": "Jl. Pelajar Pejuang 45, Turangga, Kec. Lengkong, Kota Bandung, Jawa Barat 40264",
+        "tipe_bensin": ["Shell V-Power", "Shell V-Power Diesel"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1158365985,
+      "center": {
+        "lat": -6.9478733,
+        "lon": 107.6353323
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.402.02 Soekarno Hatta Buahbatu",
+        "kategori": "spbu",
+        "alamat": "Jl. Soekarno Hatta, Batununggal, Kec. Bandung Kidul, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar", "Biosolar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184111365,
+      "center": {
+        "lat": -6.9188563,
+        "lon": 107.5851533
+      },
+      "tags": {
+        "nama": "SPBU Shell Sudirman",
+        "kategori": "spbu",
+        "alamat": "Jl. Jend. Sudirman, Ciroyom, Kec. Andir, Kota Bandung, Jawa Barat 40182",
+        "tipe_bensin": ["Shell V-Power", "Shell V-Power Diesel"],
+        "jam_operasi": "06:00-23:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184757526,
+      "center": {
+        "lat": -6.9472785,
+        "lon": 107.5991364
+      },
+      "tags": {
+        "nama": "SPBU Shell Soekarno Hatta Cibaduyut",
+        "kategori": "spbu",
+        "alamat": "Jl. Soekarno-Hatta, Kebon Lega, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40235",
+        "tipe_bensin": ["Shell V-Power Diesel"],
+        "jam_operasi": "06:00-22:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184757534,
+      "center": {
+        "lat": -6.9043778,
+        "lon": 107.6070345
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Wastukencana",
+        "kategori": "spbu",
+        "alamat": "Jl. Wastukencana, Tamansari, Kec. Bandung Wetan, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "06:00-22:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184767822,
+      "center": {
+        "lat": -6.894576,
+        "lon": 107.5872113
+      },
+      "tags": {
+        "nama": "SPBU Shell Dr. Djunjunan Pasteur",
+        "kategori": "spbu",
+        "alamat": "Jl. Dr. Djunjunan, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40163",
+        "tipe_bensin": ["Shell V-Power", "Shell V-Power Diesel"],
+        "jam_operasi": "06:00-23:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1184768320,
+      "center": {
+        "lat": -6.8989287,
+        "lon": 107.604339
+      },
+      "tags": {
+        "nama": "SPBU Shell Cihampelas",
+        "kategori": "spbu",
+        "alamat": "Jl. Cihampelas, Tamansari, Kec. Bandung Wetan, Kota Bandung, Jawa Barat 40116",
+        "tipe_bensin": ["Shell V-Power Diesel"],
+        "jam_operasi": "06:00-23:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1188020113,
+      "center": {
+        "lat": -6.9259288,
+        "lon": 107.5932695
+      },
+      "tags": {
+        "nama": "SPBU Shell Pasir Koja",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Pasirkoja, Nyengseret, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40242",
+        "tipe_bensin": ["Shell Super", "Shell V-Power", "Shell V-Power Nitro+"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1189082378,
+      "center": {
+        "lat": -6.925705,
+        "lon": 107.6316851
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Gatot Subroto",
+        "kategori": "spbu",
+        "alamat": "Jl. Gatot Subroto, Malabar, Kec. Lengkong, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "06:00-24:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1189777686,
+      "center": {
+        "lat": -6.9134091,
+        "lon": 107.6338842
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Simpang Ahmad Yani - Supratman",
+        "kategori": "spbu",
+        "alamat": "Jl. Jend. Ahmad Yani No. 238, Cihapit, Kec. Bandung Wetan, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1189780777,
+      "center": {
+        "lat": -6.9367444,
+        "lon": 107.6914537
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34-402.09 Simpang Gedebage Utara",
+        "kategori": "spbu",
+        "alamat": "Jl. Soekarno-Hatta, Cisaranten Kidul, Kec. Gedebage, Kota Bandung, Jawa Barat 40295",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Biosolar", "Solar"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1210808941,
+      "center": {
+        "lat": -6.9402951,
+        "lon": 107.677419
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Soekarno Hatta Rancabolang",
+        "kategori": "spbu",
+        "alamat": "Jl. Soekarno-Hatta, Sekejati, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1215285823,
+      "center": {
+        "lat": -6.9359453,
+        "lon": 107.714289
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.406-02 Cibiru",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Cipadung, Cipadung Kaler, Kec. Cibiru, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1283219621,
+      "center": {
+        "lat": -6.8753644,
+        "lon": 107.5969678
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Gegerkalong Setiabudhi",
+        "kategori": "spbu",
+        "alamat": "Jl. Dr. Setiabudhi, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat 40153",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1293528265,
+      "center": {
+        "lat": -6.9302936,
+        "lon": 107.6037514
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Oto Iskandardinata",
+        "kategori": "spbu",
+        "alamat": "Jl. Otto Iskandardinata, Nyengseret, Kec. Astanaanyar, Kota Bandung, Jawa Barat 40242",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1306241578,
+      "center": {
+        "lat": -6.9239028,
+        "lon": 107.6966157
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.406.06 Cinambo",
+        "kategori": "spbu",
+        "alamat": "Jl. Rumah Sakit, Cinambo, Kec. Cinambo, Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1340741507,
+      "center": {
+        "lat": -6.9475725,
+        "lon": 107.6325729
+      },
+      "tags": {
+        "nama": "SPBU BP AKR Buah Batu",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Buah Batu, Cijagra, Kec. Lengkong, Kota Bandung, Jawa Barat 40287",
+        "tipe_bensin": ["BP 92", "BP Ultimate", "BP Diesel"],
+        "jam_operasi": "06:00-24:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1359379073,
+      "center": {
+        "lat": -6.8839109,
+        "lon": 107.6137973
+      },
+      "tags": {
+        "nama": "SPBU BP AKR Dago",
+        "kategori": "spbu",
+        "alamat": "Jl. Ir. H. Juanda, Dago, Kec. Coblong, Kota Bandung, Jawa Barat 40135",
+        "tipe_bensin": ["BP 92", "BP Ultimate", "BP Diesel"],
+        "jam_operasi": "06:00-24:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1395955348,
+      "center": {
+        "lat": -6.9562258,
+        "lon": 107.6554081
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Margacinta",
+        "kategori": "spbu",
+        "alamat": "Jl. Margacinta, Cijaura, Kec. Buahbatu, Kota Bandung, Jawa Barat 40287",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1424029614,
+      "center": {
+        "lat": -6.8962976,
+        "lon": 107.5911752
+      },
+      "tags": {
+        "nama": "SPBU Vivo Sukajadi",
+        "kategori": "spbu",
+        "alamat": "Jl. Sukajadi, Sukagalih, Kec. Sukajadi, Kota Bandung, Jawa Barat 40163",
+        "tipe_bensin": ["Revvo 92", "Revvo 95"],
+        "jam_operasi": "06:00-23:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1434798107,
+      "center": {
+        "lat": -6.9431313,
+        "lon": 107.6502653
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Soekarno Hatta Kiaracondong",
+        "kategori": "spbu",
+        "alamat": "Jl. Soekarno-Hatta, Kebon Jayanti, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1474231401,
+      "center": {
+        "lat": -6.9122038,
+        "lon": 107.6017538
+      },
+      "tags": {
+        "nama": "SPBU Shell Kebon Kawung",
+        "kategori": "spbu",
+        "alamat": "Jl. Kebon Kawung, Pasir Kaliki, Kec. Cicendo, Kota Bandung, Jawa Barat 40171",
+        "tipe_bensin": ["Shell Super", "Shell V-Power", "Shell V-Power Nitro+", "Shell V-Power Diesel"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1497622762,
+      "center": {
+        "lat": -6.8826831,
+        "lon": 107.5813503
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Sarijadi Suria Sumantri",
+        "kategori": "spbu",
+        "alamat": "Jl. Prof. Dr. Surya Sumantri, Sarijadi, Kec. Sukasari, Kota Bandung, Jawa Barat 40151",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1504727479,
+      "center": {
+        "lat": -6.9183352,
+        "lon": 107.6411605
+      },
+      "tags": {
+        "nama": "SPBU Pertamina PGN Gasku Bandung MRU",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Jakarta, Babakan Surabaya, Kec. Kiaracondong, Kota Bandung, Jawa Barat 40281",
+        "tipe_bensin": ["BBG CNG"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1539025158,
+      "center": {
+        "lat": -6.9639313,
+        "lon": 107.6772452
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Derwati",
+        "kategori": "spbu",
+        "alamat": "Jl. Derwati, Derwati, Kec. Rancasari, Kota Bandung, Jawa Barat 40292",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Green 95"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000038,
-      "lat": -6.8886545,
-      "lon": 107.6037642,
+      "id": 1930142130,
+      "lat": -6.9949911,
+      "lon": 107.8534161,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Cihampelas No. 224, Cipaganti, Kec. Coblong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40139 (Cihampelas)",
-        "ref": "34.401.39 Cihampelas Atas",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Nagreg Barat",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Nagreg, Citaman, Kec. Nagreg, Kabupaten Bandung, Jawa Barat 40397",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000039,
-      "lat": -6.9363598,
-      "lon": 107.6103232,
+      "id": 1946134221,
+      "lat": -6.994982,
+      "lon": 107.8526787,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. BKR No. 88, Ancol, Kec. Regol",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40238 (BKR Moh Toha)",
-        "ref": "34.402.38 BKR / Moh. Toha",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Nagreg Timur",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Nagreg, Nagreg, Kec. Nagreg, Kabupaten Bandung, Jawa Barat 40397",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000040,
-      "lat": -6.891756,
-      "lon": 107.5629229,
+      "id": 1954844568,
+      "lat": -6.9759495,
+      "lon": 107.8388089,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Gunung Batu No. 58, Sukaraja, Kec. Cicendo",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40140 (Gunung Batu)",
-        "ref": "34.401.40 Gunung Batu",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBE Pertamina Cicalengka",
+        "kategori": "spbe",
+        "alamat": "Jl. Raya Cicalengka - Majalaya, Cicalengka Kulon, Kec. Cicalengka, Kabupaten Bandung, Jawa Barat 40395",
+        "tipe_bensin": ["LPG"],
+        "jam_operasi": "08:00-17:00",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000041,
-      "lat": -6.890816,
-      "lon": 107.6165945,
+      "id": 1954865220,
+      "lat": -6.9698444,
+      "lon": 107.8268006,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Dipatiukur No. 90, Lebakgede, Kec. Coblong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40142 (Dipatiukur)",
-        "ref": "34.401.42 Dipatiukur",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cicalengka By Pass",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Bypass Cicalengka, Tenjolaya, Kec. Cicalengka, Kabupaten Bandung, Jawa Barat 40395",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000042,
-      "lat": -6.8935305,
-      "lon": 107.5860977,
+      "id": 3426583583,
+      "lat": -6.9329256,
+      "lon": 107.7260125,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Dokter Djunjunan No. 139, Pajajaran, Kec. Cicendo",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40116 (Dr. Djunjunan)",
-        "ref": "34.401.16 Dr. Djundjunan",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Pasirbiru",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Cipadung, Pasirbiru, Kec. Cibiru, Kota Bandung, Jawa Barat 40614",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000043,
-      "lat": -6.9374582,
-      "lon": 107.693917,
+      "id": 3426583584,
+      "lat": -6.9387609,
+      "lon": 107.7340484,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Soekarno Hatta No. 728, Cisaranten Kidul, Kec. Gedebage",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina COCO 31.40601 (Gedebage)",
-        "ref": "31.406.01 COCO Gedebage",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cinunuk Cimekar",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Cinunuk No. 182, Cimekar, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000044,
-      "lat": -6.9396348,
-      "lon": 107.6625098,
+      "id": 3426583585,
+      "lat": -6.9397477,
+      "lon": 107.7413424,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Soekarno-Hatta No. 518, Batununggal, Kec. Bandung Kidul",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40240 (Soekarno Hatta Batununggal)",
-        "ref": "34.402.40 Soekarno Hatta Batununggal",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cinunuk Cileunyi",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Cinunuk, Cinunuk, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000045,
-      "lat": -6.8980911,
-      "lon": 107.5970165,
+      "id": 5809461691,
+      "lat": -6.9910069,
+      "lon": 107.6319814,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Sukajadi No. 34, Pasteur, Kec. Sukajadi",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40145 (Sukajadi RSHS)",
-        "ref": "34.401.45 Sukajadi Hasan Sadikin",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Citarum x Bojongsoang",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Buah Batu, Cikananga, Kec. Bojongsoang, Kabupaten Bandung, Jawa Barat 40288",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000046,
-      "lat": -6.919876,
-      "lon": 107.6119467,
+      "id": 5809461696,
+      "lat": -6.9949827,
+      "lon": 107.6305194,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Naripan No. 84, Kebon Pisang, Kec. Sumur Bandung",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40148 (Naripan Tamblong)",
-        "ref": "34.401.48 Naripan x Tamblong",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Bojongsoang Raya",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Bojongsoang, Lengkong, Kec. Bojongsoang, Kabupaten Bandung, Jawa Barat 40287",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000047,
-      "lat": -6.9382568,
-      "lon": 107.6168083,
+      "id": 5810377857,
+      "lat": -6.9406539,
+      "lon": 107.7409499,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Moh. Toha No. 180, Pasirluyu, Kec. Regol",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40242 (Moh Toha Pasirluyu)",
-        "ref": "34.402.42 Moh. Toha",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Cileunyi Barat",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Cileunyi, Cileunyi Wetan, Kec. Cileunyi, Kabupaten Bandung, Jawa Barat 40393",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000048,
-      "lat": -6.9376946,
-      "lon": 107.6178229,
+      "id": 5810389856,
+      "lat": -7.0360157,
+      "lon": 107.9265685,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Soekarno Hatta No. 392, Karasak, Kec. Astanaanyar",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40245 (Soekarno Hatta Moh Toha)",
-        "ref": "34.402.45 Soekarno Hatta / Moh Toha",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Kamojang Garut",
+        "kategori": "spbu",
+        "alamat": "Jl. Kamojang, Ibun, Kec. Ibun, Kabupaten Bandung, Jawa Barat 40384",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000049,
-      "lat": -6.9605927,
-      "lon": 107.6387438,
+      "id": 5946695187,
+      "lat": -7.0061426,
+      "lon": 107.6148338,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jalan Buah Batu No. 302, Kujangsari, Kec. Bandung Kidul",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40248 (Exit Tol Buahbatu)",
-        "ref": "34.402.48 SPBU Buah Batu Exit",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Kulalet Baleendah",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Dayeuhkolot - Banjaran, Kulalet, Kec. Baleendah, Kabupaten Bandung, Jawa Barat 40375",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000050,
-      "lat": -6.8935818,
-      "lon": 107.585959,
+      "id": 5946697287,
+      "lat": -7.0187791,
+      "lon": 107.6009243,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Dr. Djunjunan No. 195, Sukagalih, Kec. Sukajadi",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40150 (Pasteur Inbound)",
-        "ref": "34.401.50 Dr. Djunjunan / Pasteur",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pameungpeuk",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Banjaran, Pameungpeuk, Kec. Pameungpeuk, Kabupaten Bandung, Jawa Barat 40376",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000051,
-      "lat": -6.8859613,
-      "lon": 107.5909396,
+      "id": 6601797127,
+      "lat": -7.1096121,
+      "lon": 107.5569758,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Prof. Dr. Sutami No. 45, Sukagalih, Kec. Sukajadi",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "Pertamini Barokah (Lapangan Abra)",
-        "ref": "Pertamini Barokah Lapangan Abra",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina 34.403.27 Pangalengan",
+        "kategori": "spbu",
+        "alamat": "Jalan Raya Banjaran - Pangalengan, Cipinang, Kec. Cimaung, Kabupaten Bandung, Jawa Barat 40374",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000052,
-      "lat": -6.8950995,
-      "lon": 107.5892089,
+      "id": 6656313290,
+      "lat": -7.0569869,
+      "lon": 107.5692844,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Dr. Djunjunan No. 122, Sukagalih, Kec. Sukajadi",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40152 (Pasteur Tengah)",
-        "ref": "34.401.52 Dr. Djunjunan / Pasteur",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Banjaran",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Banjaran No. 50, Banjaran, Kec. Banjaran, Kabupaten Bandung, Jawa Barat 40377",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000053,
-      "lat": -6.8991444,
-      "lon": 107.6271612,
+      "id": 7095073728,
+      "lat": -6.9686108,
+      "lon": 107.703198,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Surapati No. 78, Cihaur Geulis, Kec. Cibeunying Kaler",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40155 (Surapati)",
-        "ref": "34.401.55 Surapati",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Sapan Cikeruh",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Sapan, Tegalluar, Kec. Bojongsoang, Kabupaten Bandung, Jawa Barat 40288",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000054,
-      "lat": -6.9429392,
-      "lon": 107.6423171,
+      "id": 10303652624,
+      "lat": -6.9636875,
+      "lon": 107.6141275,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Kiaracondong No. 380, Kebon Jayanti, Kec. Kiaracondong",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40250 (Terusan Kiaracondong Selatan)",
-        "ref": "34.402.50 Terusan Kiaracondong",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina Mengger Moh Toha",
+        "kategori": "spbu",
+        "alamat": "Jalan Mohammad Toha No. 33, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     },
     {
       "type": "node",
-      "id": 1000000055,
-      "lat": -6.9409118,
-      "lon": 107.6419023,
+      "id": 11002793645,
+      "lat": -7.0191406,
+      "lon": 107.6543217,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Terusan Kiaracondong No. 240, Sekejati, Kec. Buahbatu",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina COCO 31.40201 (Terusan Kiaracondong)",
-        "ref": "31.402.01 Terusan Kiaracondong",
-        "brand:wikidata": "Q1641044"
+        "nama": "SPBU Pertamina 34.403.05 Laswi, Baleendah",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Laswi No. 71, Baleendah, Kec. Baleendah, Kabupaten Bandung",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Pertamax Turbo", "Solar", "Biosolar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2023-06-26"
       }
     },
     {
       "type": "node",
-      "id": 1000000056,
-      "lat": -6.8826831,
-      "lon": 107.5813503,
+      "id": 12196540885,
+      "lat": -7.1891081,
+      "lon": 107.6801643,
       "tags": {
-        "addr:city": "Bandung",
-        "addr:street": "Jl. Gegerkalong Hilir No. 80, Sarijadi, Kec. Sukasari",
-        "amenity": "fuel",
-        "brand": "Pertamina",
-        "name": "SPBU Pertamina 34.40165 (Sarijadi)",
-        "ref": "34.401.65 Sarijadi",
-        "brand:wikidata": "Q1641044"
+        "nama": "Bensin Eceran Pangalengan Timur",
+        "kategori": "eceran",
+        "alamat": "Jl. Raya Pangalengan, Margamukti, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertalite"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12196997553,
+      "lat": -7.1942414,
+      "lon": 107.6697392,
+      "tags": {
+        "nama": "Bensin Eceran Situ Cileunca",
+        "kategori": "eceran",
+        "alamat": "Jl. Situ Cileunca, Pulosari, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertalite"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12196997965,
+      "lat": -7.1933818,
+      "lon": 107.6695924,
+      "tags": {
+        "nama": "Bensin Eceran Warnasari",
+        "kategori": "eceran",
+        "alamat": "Jl. Warnasari, Warnasari, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertalite"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12197206696,
+      "lat": -7.2107542,
+      "lon": 107.6732345,
+      "tags": {
+        "nama": "Bensin Eceran Pulosari South",
+        "kategori": "eceran",
+        "alamat": "Jl. Raya Rahong, Pulosari, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertalite"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12639965511,
+      "lat": -7.1223225,
+      "lon": 107.4277395,
+      "tags": {
+        "nama": "SPBU Pertamina Ciwidey West",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Ciwidey - Rancabali, Alamendah, Kec. Rancabali, Kabupaten Bandung, Jawa Barat 40973",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13985884435,
+      "lat": -7.0139794,
+      "lon": 107.8028758,
+      "tags": {
+        "nama": "SPBU Pertamina Majalaya Barat",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Majalaya - Rancaekek, Majasetra, Kec. Majalaya, Kabupaten Bandung, Jawa Barat 40382",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13985884695,
+      "lat": -7.0356101,
+      "lon": 107.7771293,
+      "tags": {
+        "nama": "SPBU Pertamina Paseh Majalaya",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Paseh, Tangsimekar, Kec. Paseh, Kabupaten Bandung, Jawa Barat 40383",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13985908145,
+      "lat": -7.0093557,
+      "lon": 107.7230577,
+      "tags": {
+        "nama": "SPBU Pertamina Solokan Jeruk",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Solokan Jeruk, Solokanjeruk, Kec. Solokanjeruk, Kabupaten Bandung, Jawa Barat 40382",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "node",
+      "id": 14138270101,
+      "lat": -6.9829697,
+      "lon": 107.6208844,
+      "tags": {
+        "nama": "SPBU Pertamina Dayeuhkolot",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Dayeuhkolot, Dayeuhkolot, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40258",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 193663805,
+      "center": {
+        "lat": -7.0244079,
+        "lon": 107.530076
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Soreang",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Soreang - Banjaran, Pamekaran, Kec. Soreang, Kabupaten Bandung, Jawa Barat 40911",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 242222687,
+      "center": {
+        "lat": -7.1758628,
+        "lon": 107.5739258
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Pangalengan Utama",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Pangalengan No. 322, Pangalengan, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 242223578,
+      "center": {
+        "lat": -7.047192,
+        "lon": 107.5816569
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Banjaran Kota",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Banjaran - Arjasari, Banjaran Wetan, Kec. Banjaran, Kabupaten Bandung, Jawa Barat 40377",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 296147183,
+      "center": {
+        "lat": -7.0292461,
+        "lon": 107.8836734
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Lingkar Nagreg",
+        "kategori": "spbu",
+        "alamat": "Jl. Lingkar Nagreg, Ciherang, Kec. Nagreg, Kabupaten Bandung, Jawa Barat 40397",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 705397551,
+      "center": {
+        "lat": -7.0437855,
+        "lon": 107.5656075
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Soreang Banjaran",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Soreang - Banjaran, Cangkuang, Kec. Cangkuang, Kabupaten Bandung, Jawa Barat 40238",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 777092837,
+      "center": {
+        "lat": -6.9658485,
+        "lon": 107.5757133
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Kopo Sayati 88",
+        "kategori": "spbu",
+        "alamat": "Jalan Kopo Sayati No. 88, Sayati, Margahayu, Bandung, Jawa Barat, 40233",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 779238895,
+      "center": {
+        "lat": -6.9702438,
+        "lon": 107.5746338
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.402.51 Kopo Sayati x Manglid",
+        "kategori": "spbu",
+        "alamat": "Jalan Kopo Sayati No. 167, Sayati, Margahayu, Kabupaten Bandung, 40228",
+        "tipe_bensin": ["Pertamax", "Pertamax Green 95", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 814745762,
+      "center": {
+        "lat": -7.0853707,
+        "lon": 107.7071369
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.403.28 Ciparay",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Ciparay - Pacet, Ciparay, Kec. Ciparay, Kabupaten Bandung, Jawa Barat 40381",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 824631139,
+      "center": {
+        "lat": -7.0316269,
+        "lon": 107.7515354
+      },
+      "tags": {
+        "nama": "SPBU Pertamina 34.40322 Manirancan",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Majalaya - Rancaekek, Manirancan, Kec. Solokanjeruk, Kabupaten Bandung, Jawa Barat 40382",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1182634029,
+      "center": {
+        "lat": -6.9662961,
+        "lon": 107.6374528
+      },
+      "tags": {
+        "nama": "SPBU Shell Terusan Buah Batu",
+        "kategori": "spbu",
+        "alamat": "Jl. Terusan Buah Batu, Kujangsari, Kec. Bandung Kidul, Kota Bandung, Jawa Barat 40287",
+        "tipe_bensin": ["Shell V-Power Diesel"],
+        "jam_operasi": "06:00-22:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1267444478,
+      "center": {
+        "lat": -7.052096,
+        "lon": 107.7100578
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Pacet Cikoneng",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Pacet, Cikoneng, Kec. Pacet, Kabupaten Bandung, Jawa Barat 40385",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1273090461,
+      "center": {
+        "lat": -7.0764109,
+        "lon": 107.4870349
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Ciwidey Utama",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Ciwidey, Ciwidey, Kec. Ciwidey, Kabupaten Bandung, Jawa Barat 40972",
+        "tipe_bensin": ["Pertalite", "Pertamax", "Solar"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1273117220,
+      "center": {
+        "lat": -7.0899582,
+        "lon": 107.4802215
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Tenjolaya Ciwidey",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Tenjolaya, Tenjolaya, Kec. Pasirjambu, Kabupaten Bandung, Jawa Barat 40972",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1274761563,
+      "center": {
+        "lat": -7.1830234,
+        "lon": 107.561459
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Pangalengan Selatan",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Pangalengan, Tribaktimulya, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1274849094,
+      "center": {
+        "lat": -7.192728,
+        "lon": 107.5847097
+      },
+      "tags": {
+        "nama": "Pertashop Pangalengan Pulosari",
+        "kategori": "pertashop",
+        "alamat": "Jl. Raya Pangalengan, Pulosari, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertamax"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1316553700,
+      "center": {
+        "lat": -7.1762114,
+        "lon": 107.6844216
+      },
+      "tags": {
+        "nama": "Pertashop Margamukti Pangalengan",
+        "kategori": "pertashop",
+        "alamat": "Jl. Raya Cileunca, Margamukti, Kec. Pangalengan, Kabupaten Bandung, Jawa Barat 40378",
+        "tipe_bensin": ["Pertamax"],
+        "jam_operasi": "06:00-21:00",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1374676886,
+      "center": {
+        "lat": -7.1079132,
+        "lon": 107.4542916
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Rancabali",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Rancabali, Patengan, Kec. Rancabali, Kabupaten Bandung, Jawa Barat 40973",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1560123139,
+      "center": {
+        "lat": -7.0327561,
+        "lon": 107.782286
+      },
+      "tags": {
+        "nama": "SPBU Pertamina Ciparay Majalaya",
+        "kategori": "spbu",
+        "alamat": "Jl. Raya Majalaya - Ciparay, Mekarsari, Kec. Ciparay, Kabupaten Bandung, Jawa Barat 40381",
+        "tipe_bensin": ["Pertalite", "Pertamax"],
+        "jam_operasi": "24/7",
+        "verifikasi_terakhir": "2026-10-09"
       }
     }
   ]

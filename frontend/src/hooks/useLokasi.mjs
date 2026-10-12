@@ -105,6 +105,7 @@ export function useLokasi(userLocation) {
 
   return {
     lokasiList: filteredLokasi,
+    semuaLokasi: lokasiList,
     loading,
     error,
     filterKategori,

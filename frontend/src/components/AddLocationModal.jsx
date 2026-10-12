@@ -37,8 +37,14 @@ const pilihanBensin = [
 export default function AddLocationModal({
   isOpen, 
   onClose, 
-  onSuccess 
+  onSuccess,
+  token,
+  userName,
+  onNotify
 }) {
+  // Fallback aman kalau prop belum dikirim
+  const notify = onNotify || ((type, title, message) => alert(`${title}\n${message || ''}`));
+
   const [formData, setFormData] = useState({
     nama: '',
     kategori: 'spbu',
@@ -58,7 +64,7 @@ export default function AddLocationModal({
   // Gunakan Lokasi Saya
   const handleUseMyLocation = () => {
     if (!navigator.geolocation) {
-      alert('Browser kamu tidak mendukung lokasi.');
+      notify('error', 'Browser kamu tidak mendukung lokasi.');
       return;
     }
 
@@ -70,7 +76,7 @@ export default function AddLocationModal({
         ]);
       },
       () => {
-        alert('Lokasi kamu tidak dapat ditemukan.');
+        notify('error', 'Lokasi kamu tidak dapat ditemukan.');
       }
     );
   };
@@ -79,7 +85,13 @@ export default function AddLocationModal({
     e.preventDefault();
 
     if (!isConfirmed) {
-      alert('Harap centang konfirmasi informasi terlebih dahulu!');
+      notify('error', 'Belum dikonfirmasi', 'Harap centang konfirmasi informasi terlebih dahulu!');
+      return;
+    }
+
+    if (!token) {
+      notify('error', 'Belum login', 'Silakan login terlebih dahulu untuk menambah lokasi.');
+      onClose();
       return;
     }
 
@@ -102,6 +114,7 @@ export default function AddLocationModal({
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify(payload),
       });
@@ -109,7 +122,11 @@ export default function AddLocationModal({
       const data = await res.json();
 
       if (res.ok) {
-        alert('Lokasi berhasil ditambahkan!');
+        notify(
+          'success',
+          'Lokasi berhasil dikirim!',
+          'Menunggu persetujuan admin sebelum tampil di peta.'
+        );
 
         onSuccess();
         onClose();
@@ -117,7 +134,7 @@ export default function AddLocationModal({
         // Reset form
         setFormData({
           nama: '',
-          kategori: 'SPBU',
+          kategori: 'spbu',
           harga: '',
           alamat: '',
           jam_operasi: '',
@@ -129,14 +146,17 @@ export default function AddLocationModal({
         setIsConfirmed(false);
         setPosition([-6.9175, 107.6191]);
 
+      } else if (res.status === 401) {
+        notify('error', 'Sesi berakhir', data.message || 'Silakan login lagi.');
+        onClose();
       } else {
         console.error('RESPON BACKEND:', data);
-        alert(data.message || 'Gagal menambah lokasi!');
+        notify('error', 'Gagal menambah lokasi', data.message || 'Coba lagi.');
       }
 
     } catch (err) {
       console.error('ERROR:', err);
-      alert('Terjadi kesalahan koneksi ke backend!');
+      notify('error', 'Tidak dapat terhubung ke server', 'Pastikan backend berjalan.');
     } finally {
       setLoading(false);
     }
@@ -176,6 +196,11 @@ export default function AddLocationModal({
 
           <p className="text-xs text-gray-500 dark:text-gray-400">
             Bantu pengendara lain menemukan sumber BBM di sekitar mereka.
+          </p>
+
+          <p className="text-[10px] text-green-600 dark:text-green-400 font-medium pt-1">
+            Masuk sebagai <span className="font-bold">{userName}</span> — lokasi yang kamu kirim
+            akan <span className="font-bold">menunggu persetujuan admin</span> sebelum tampil di peta.
           </p>
 
           <p className="text-[10px] text-gray-400 dark:text-gray-500 pt-2">

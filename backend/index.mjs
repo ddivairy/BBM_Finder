@@ -3,23 +3,31 @@ import cors from "cors";
 import db from "./config/db.mjs";
 import path from "path";
 import { fileURLToPath } from "url";
+import authRoutes from "./routes/authRoutes.mjs";
+import laporanRoutes from "./routes/laporanRoutes.mjs";
+import infoRoutes from "./routes/infoRoutes.mjs";
+import { requireAuth, requireAdmin } from "./middleware/auth.mjs";
 
 const app = express();
 const PORT = 5000;
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(__dirname));
+app.use("/api/auth", authRoutes);
+app.use("/api/laporan", laporanRoutes);
+app.use("/api/info", infoRoutes);
 
 // HOME
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// POST LOKASI
-app.post("/api/lokasi", async (req, res) => {
+// POST LOKASI (wajib login — disimpan sebagai 'pending' sampai di-acc admin)
+app.post("/api/lokasi", requireAuth, async (req, res) => {
     try {
         const {
             nama,
@@ -46,9 +54,11 @@ app.post("/api/lokasi", async (req, res) => {
                 bujur,
                 tipe_bensin,
                 jam_operasi,
-                verifikasi_terakhir
+                verifikasi_terakhir,
+                ditambahkan_oleh,
+                status
             )
-            VALUES (?, ?, ?, ?, ?, ?, DEFAULT, CURRENT_DATE)
+            VALUES (?, ?, ?, ?, ?, ?, DEFAULT, CURRENT_DATE, ?, 'pending')
         `;
 
         const [result] = await db.execute(query, [
@@ -57,11 +67,12 @@ app.post("/api/lokasi", async (req, res) => {
             alamat,
             lintang,
             bujur,
-            JSON.stringify(tipe_bensin)
+            JSON.stringify(tipe_bensin),
+            req.user.id
         ]);
 
         res.status(201).json({
-            message: "Lokasi berhasil didaftarkan",
+            message: "Lokasi berhasil dikirim dan menunggu persetujuan admin.",
             lokasiId: result.insertId
         });
 
@@ -74,19 +85,73 @@ app.post("/api/lokasi", async (req, res) => {
     }
 });
 
-// GET SEMUA LOKASI + FILTER KATEGORI
+// GET LOKASI MENUNGGU PERSETUJUAN (admin)
+app.get("/api/lokasi/pending", requireAuth, requireAdmin, async (req, res) => {
+    try {
+        const [rows] = await db.execute(`
+            SELECT l.*, u.nama AS nama_penambah
+            FROM lokasi l
+            LEFT JOIN User u ON u.id = l.ditambahkan_oleh
+            WHERE l.status = 'pending'
+            ORDER BY l.dibuat_pada DESC
+        `);
+
+        res.status(200).json(rows);
+    } catch (error) {
+        console.error("Error database:", error);
+        res.status(500).json({
+            message: "Terjadi kesalahan saat mengambil data pending."
+        });
+    }
+});
+
+// ACC / TOLAK LOKASI (admin)
+app.put("/api/lokasi/:id/verifikasi", requireAuth, requireAdmin, async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { status } = req.body;
+
+        if (!["disetujui", "ditolak"].includes(status)) {
+            return res.status(400).json({
+                message: "Status harus 'disetujui' atau 'ditolak'."
+            });
+        }
+
+        const [result] = await db.execute(
+            "UPDATE lokasi SET status = ? WHERE id = ?",
+            [status, id]
+        );
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({
+                message: "Lokasi tidak ditemukan."
+            });
+        }
+
+        res.status(200).json({
+            message: `Lokasi berhasil ${status}.`
+        });
+    } catch (error) {
+        console.error("Error database:", error);
+        res.status(500).json({
+            message: "Terjadi kesalahan saat memverifikasi lokasi."
+        });
+    }
+});
+
+// GET SEMUA LOKASI + FILTER KATEGORI (hanya yang sudah disetujui admin)
 app.get("/api/lokasi", async (req, res) => {
     try {
         const { kategori } = req.query;
 
-        let query = "SELECT * FROM lokasi";
+        let query = "SELECT * FROM lokasi WHERE status = 'disetujui'";
         const queryParams = [];
 
         if (
             kategori &&
             (kategori === "spbu" || kategori === "eceran")
         ) {
-            query += " WHERE kategori = ?";
+            query += " AND kategori = ?";
             queryParams.push(kategori);
         }
 
@@ -110,7 +175,7 @@ app.get("/api/lokasi/cari", async (req, res) => {
 
         if (!q || !q.trim()) {
             const [rows] = await db.execute(
-                "SELECT * FROM lokasi"
+                "SELECT * FROM lokasi WHERE status = 'disetujui'"
             );
 
             return res.status(200).json(rows);
@@ -122,10 +187,13 @@ app.get("/api/lokasi/cari", async (req, res) => {
             SELECT *
             FROM lokasi
             WHERE
-                nama LIKE ?
-                OR alamat LIKE ?
-                OR tipe_bensin LIKE ?
-                OR kategori LIKE ?
+                status = 'disetujui'
+                AND (
+                    nama LIKE ?
+                    OR alamat LIKE ?
+                    OR tipe_bensin LIKE ?
+                    OR kategori LIKE ?
+                )
         `;
 
         const [rows] = await db.execute(query, [
