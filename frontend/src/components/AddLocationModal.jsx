@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import { motion, AnimatePresence } from 'framer-motion';
+import { API_URL } from '../services/api.mjs';
 
 // Fix icon kayak di MapView
 const markerIcon = new L.Icon({
@@ -110,7 +111,7 @@ export default function AddLocationModal({
 
       console.log('DATA YANG DIKIRIM:', payload);
 
-      const res = await fetch('http://localhost:5000/api/lokasi', {
+      const res = await fetch(`${API_URL}/lokasi`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

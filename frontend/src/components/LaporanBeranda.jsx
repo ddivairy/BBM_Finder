@@ -103,7 +103,8 @@ export default function LaporanBeranda({
             Laporan Komunitas
           </span>
 
-          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white mt-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 dark:text-white mt-2 flex items-center gap-2">
+            <MessageSquareText className="w-6 h-6 text-red-500" />
             Laporan BBM Terkini
           </h2>
 

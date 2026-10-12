@@ -14,6 +14,7 @@ import LaporanSepi from './components/LaporanSepi.jsx';
 import KomunitasPengecer from './components/KomunitasPengecer.jsx';
 import LaporanBeranda from './components/LaporanBeranda.jsx';
 import { motion } from 'framer-motion';
+import { API_URL } from './services/api.mjs';
 import 'leaflet/dist/leaflet.css';
 
 const AUTH_KEY = 'bbm_auth';
@@ -92,7 +93,7 @@ export default function App() {
 
   const handleLogout = async () => {
     try {
-      await fetch('http://localhost:5000/api/auth/logout', {
+      await fetch(`${API_URL}/auth/logout`, {
         method: 'POST',
         headers: { Authorization: `Bearer ${auth.token}` },
       });
@@ -311,7 +312,7 @@ export default function App() {
             onClose={() => setShowRegister(false)}
             onRegister={async (data) => {
               try {
-                const response = await fetch('http://localhost:5000/api/auth/register', {
+                const response = await fetch(`${API_URL}/auth/register`, {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(data),

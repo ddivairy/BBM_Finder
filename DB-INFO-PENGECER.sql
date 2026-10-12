@@ -17,3 +17,10 @@ CREATE TABLE IF NOT EXISTS info_like (
     user_id INT NOT NULL,
     UNIQUE KEY uq_info_user (info_id, user_id)
 );
+
+CREATE TABLE IF NOT EXISTS info_dislike (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    info_id INT NOT NULL,
+    user_id INT NOT NULL,
+    UNIQUE KEY uq_info_user (info_id, user_id)
+);

@@ -8,7 +8,9 @@ import {
   Fuel,
   Radio,
   ChevronDown,
-  Plus
+  Plus,
+  BadgeCheck,
+  ThumbsDown
 } from 'lucide-react';
 import { api } from '../services/api.mjs';
 
@@ -152,7 +154,39 @@ export default function KomunitasPengecer({
             ? {
                 ...i,
                 jumlah_like: hasil.jumlah_like,
+                jumlah_dislike: hasil.jumlah_dislike,
                 disukai_saya: hasil.disukai ? 1 : 0,
+                tidak_disukai_saya: hasil.tidak_disukai ? 1 : 0,
+              }
+            : i
+        )
+      );
+    } catch (err) {
+      onNotify?.('error', 'Gagal', err.message);
+    } finally {
+      setSedangLike(null);
+    }
+  };
+
+  const handleDislike = async (id) => {
+    if (!user) {
+      onNotify?.('info', 'Login dulu', 'Dislike butuh akun supaya tidak bisa spam.');
+      onLoginClick?.();
+      return;
+    }
+
+    setSedangLike(id);
+    try {
+      const hasil = await api.dislikeInfoPengecer(id, token);
+      setDaftar((prev) =>
+        prev.map((i) =>
+          i.id === id
+            ? {
+                ...i,
+                jumlah_like: hasil.jumlah_like,
+                jumlah_dislike: hasil.jumlah_dislike,
+                disukai_saya: hasil.disukai ? 1 : 0,
+                tidak_disukai_saya: hasil.tidak_disukai ? 1 : 0,
               }
             : i
         )
@@ -356,6 +390,7 @@ export default function KomunitasPengecer({
           <AnimatePresence initial={false}>
             {daftar.map((info) => {
               const liked = Boolean(info.disukai_saya);
+              const disliked = Boolean(info.tidak_disukai_saya);
 
               return (
                 <motion.article
@@ -376,6 +411,14 @@ export default function KomunitasPengecer({
                         <h3 className="font-bold text-sm text-gray-900 dark:text-white">
                           {info.nama_pelapor}
                         </h3>
+                        {info.status_verifikasi_pelapor === 'disetujui' && (
+                          <BadgeCheck
+                            size={15}
+                            className="text-blue-500"
+                            aria-label="User terverifikasi"
+                            title="User terverifikasi"
+                          />
+                        )}
 
                         <span className="inline-flex items-center gap-1 text-[10px] text-gray-400">
                           <Clock size={11} />
@@ -399,19 +442,38 @@ export default function KomunitasPengecer({
 
                   {/* Footer */}
                   <div className="flex items-center justify-between mt-3 pt-2.5 border-t border-gray-100 dark:border-gray-700">
-                    <button
-                      onClick={() => handleLike(info.id)}
-                      disabled={sedangLike === info.id}
-                      aria-label="Setujui info ini"
-                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-semibold transition ${
-                        liked
-                          ? 'bg-red-50 border-red-200 text-red-600 dark:bg-red-950/50 dark:border-red-900 dark:text-red-400'
-                          : 'bg-gray-50 border-gray-200 text-gray-500 hover:bg-red-50 hover:border-red-200 hover:text-red-500 dark:bg-gray-700/50 dark:border-gray-600 dark:text-gray-400 dark:hover:bg-red-950/40'
-                      }`}
-                    >
-                      <Heart size={13} fill={liked ? 'currentColor' : 'none'} />
-                      {info.jumlah_like}
-                    </button>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => handleLike(info.id)}
+                        disabled={sedangLike === info.id}
+                        aria-label={liked ? 'Batalkan love pada info ini' : 'Love info ini'}
+                        title={liked ? 'Klik untuk unlove' : 'Klik untuk love'}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-semibold transition ${
+                          liked
+                            ? 'bg-red-50 border-red-200 text-red-600 dark:bg-red-950/50 dark:border-red-900 dark:text-red-400'
+                            : 'bg-gray-50 border-gray-200 text-gray-500 hover:bg-red-50 hover:border-red-200 hover:text-red-500 dark:bg-gray-700/50 dark:border-gray-600 dark:text-gray-400 dark:hover:bg-red-950/40'
+                        }`}
+                      >
+                        <Heart size={13} fill={liked ? 'currentColor' : 'none'} />
+                        {info.jumlah_like}
+                        <span>Love</span>
+                      </button>
+                      <button
+                        onClick={() => handleDislike(info.id)}
+                        disabled={sedangLike === info.id}
+                        aria-label={disliked ? 'Batalkan dislike pada info ini' : 'Dislike info ini'}
+                        title={disliked ? 'Klik untuk membatalkan dislike' : 'Klik jika info ini salah'}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border text-xs font-semibold transition ${
+                          disliked
+                            ? 'bg-orange-50 border-orange-200 text-orange-700 dark:bg-orange-950/50 dark:border-orange-900 dark:text-orange-400'
+                            : 'bg-gray-50 border-gray-200 text-gray-500 hover:bg-orange-50 hover:border-orange-200 hover:text-orange-600 dark:bg-gray-700/50 dark:border-gray-600 dark:text-gray-400 dark:hover:bg-orange-950/40'
+                        }`}
+                      >
+                        <ThumbsDown size={13} fill={disliked ? 'currentColor' : 'none'} />
+                        {info.jumlah_dislike || 0}
+                        <span>Dislike</span>
+                      </button>
+                    </div>
 
                     <span className="text-[10px] text-gray-400">
                       Berlaku sampai tengah malam

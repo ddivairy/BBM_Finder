@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS User (
     email VARCHAR(150) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     role ENUM('user','admin') NOT NULL DEFAULT 'user',
+    status_verifikasi ENUM('pending','disetujui','ditolak') NOT NULL DEFAULT 'disetujui',
     token VARCHAR(64) DEFAULT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
@@ -15,3 +16,5 @@ CREATE TABLE IF NOT EXISTS User (
 -- ALTER TABLE User
 --     ADD COLUMN role ENUM('user','admin') NOT NULL DEFAULT 'user' AFTER password,
 --     ADD COLUMN token VARCHAR(64) DEFAULT NULL AFTER role;
+
+-- Untuk database lama, jalankan DB-USER-VERIFIKASI.sql satu kali.

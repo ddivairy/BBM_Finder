@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+export const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000/api').replace(/\/+$/, '');
 
 export const api = {
   // Dapetin lokasi
@@ -170,6 +170,21 @@ export const api = {
 
     if (!res.ok) {
       throw new Error(data.message || 'Gagal memproses like');
+    }
+
+    return data;
+  },
+
+  dislikeInfoPengecer: async (infoId, token) => {
+    const res = await fetch(`${API_URL}/info/${infoId}/dislike`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.message || 'Gagal memproses dislike');
     }
 
     return data;
