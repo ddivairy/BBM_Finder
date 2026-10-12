@@ -2,7 +2,8 @@ import express from "express";
 import {
   getInfoHariIni,
   buatInfo,
-  toggleLikeInfo
+  toggleLikeInfo,
+  toggleDislikeInfo
 } from "../controllers/infoController.mjs";
 import { requireAuth, optionalAuth } from "../middleware/auth.mjs";
 
@@ -16,5 +17,6 @@ router.post("/", requireAuth, buatInfo);
 
 // Toggle like (wajib login)
 router.post("/:id/like", requireAuth, toggleLikeInfo);
+router.post("/:id/dislike", requireAuth, toggleDislikeInfo);
 
 export default router;

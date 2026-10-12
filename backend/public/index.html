@@ -121,6 +121,57 @@
 
 <h1>Sistem Manajemen BBM Finder</h1>
 
+<div class="card" id="adminLoginCard">
+    <h2>Login Admin</h2>
+    <form id="adminLoginForm">
+        <div class="form-group">
+            <label for="adminEmail">Email</label>
+            <input type="email" id="adminEmail" required autocomplete="username">
+        </div>
+        <div class="form-group">
+            <label for="adminPassword">Password</label>
+            <input type="password" id="adminPassword" required autocomplete="current-password">
+        </div>
+        <button type="submit">Login Admin</button>
+        <button type="button" id="adminLogoutButton" style="display:none; background-color:#95a5a6;">Logout</button>
+        <p id="adminLoginMessage" role="status"></p>
+    </form>
+</div>
+
+<div class="card" id="pendingCard" style="display:none;">
+    <h2>Lokasi Menunggu Persetujuan</h2>
+    <button type="button" onClick="ambilLokasiPending()">Muat Ulang</button>
+    <table>
+        <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Kategori</th>
+            <th>Alamat</th>
+            <th>Koordinat</th>
+            <th>Pengusul</th>
+            <th>Aksi</th>
+        </tr>
+        </thead>
+        <tbody id="tabelPending"></tbody>
+    </table>
+</div>
+
+<div class="card" id="pendingUsersCard" style="display:none;">
+    <h2>User Menunggu Persetujuan</h2>
+    <button type="button" onClick="ambilUserPending()">Muat Ulang</button>
+    <table>
+        <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Tanggal Daftar</th>
+            <th>Aksi</th>
+        </tr>
+        </thead>
+        <tbody id="tabelUserPending"></tbody>
+    </table>
+</div>
+
 <!-- CARD 1: FORMULIR INPUT -->
 <div class="card">
     <h2 id="formTitle">Tambah Lokasi Baru</h2>
@@ -211,6 +262,194 @@
     const API_URL = '/api/lokasi';
     const form = document.getElementById('lokasiForm');
     const tabelBody = document.getElementById('tabelLokasi');
+    const adminLoginForm = document.getElementById('adminLoginForm');
+    const adminLoginMessage = document.getElementById('adminLoginMessage');
+    const pendingCard = document.getElementById('pendingCard');
+    const pendingBody = document.getElementById('tabelPending');
+    const pendingUsersCard = document.getElementById('pendingUsersCard');
+    const pendingUsersBody = document.getElementById('tabelUserPending');
+    let adminToken = sessionStorage.getItem('bbm_admin_token') || '';
+
+    adminLoginForm.addEventListener('submit', async event => {
+        event.preventDefault();
+        adminLoginMessage.textContent = 'Memeriksa akun...';
+        try {
+            const response = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: document.getElementById('adminEmail').value,
+                    password: document.getElementById('adminPassword').value
+                })
+            });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.message || 'Login gagal.');
+            if (data.user?.role !== 'admin') {
+                await fetch('/api/auth/logout', {
+                    method: 'POST',
+                    headers: { Authorization: `Bearer ${data.token}` }
+                });
+                throw new Error('Akun ini bukan admin.');
+            }
+            adminToken = data.token;
+            sessionStorage.setItem('bbm_admin_token', adminToken);
+            adminLoginMessage.textContent = `Login sebagai ${data.user.nama}.`;
+            document.getElementById('adminLogoutButton').style.display = 'inline-block';
+            pendingCard.style.display = 'block';
+            pendingUsersCard.style.display = 'block';
+            await ambilLokasiPending();
+            await ambilUserPending();
+        } catch (error) {
+            adminLoginMessage.textContent = error.message;
+        }
+    });
+
+    document.getElementById('adminLogoutButton').addEventListener('click', async () => {
+        if (adminToken) {
+            await fetch('/api/auth/logout', {
+                method: 'POST',
+                headers: { Authorization: `Bearer ${adminToken}` }
+            }).catch(() => {});
+        }
+        adminToken = '';
+        sessionStorage.removeItem('bbm_admin_token');
+        pendingCard.style.display = 'none';
+        pendingUsersCard.style.display = 'none';
+        document.getElementById('adminLogoutButton').style.display = 'none';
+        adminLoginMessage.textContent = 'Anda sudah logout.';
+    });
+
+    async function ambilLokasiPending() {
+        if (!adminToken) return;
+        pendingBody.innerHTML = '<tr><td colspan="6">Memuat pengajuan...</td></tr>';
+        try {
+            const response = await fetch(`${API_URL}/pending`, {
+                headers: { Authorization: `Bearer ${adminToken}` }
+            });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.message || 'Gagal memuat pengajuan.');
+            renderLokasiPending(data);
+        } catch (error) {
+            pendingBody.innerHTML = `<tr><td colspan="6">${error.message}</td></tr>`;
+        }
+    }
+
+    function renderLokasiPending(data) {
+        pendingBody.innerHTML = '';
+        if (data.length === 0) {
+            pendingBody.innerHTML = '<tr><td colspan="6" style="text-align:center;">Tidak ada lokasi yang menunggu persetujuan.</td></tr>';
+            return;
+        }
+        data.forEach(lokasi => {
+            const row = document.createElement('tr');
+            const fields = [lokasi.nama, lokasi.kategori, lokasi.alamat || '-', `${lokasi.lintang}, ${lokasi.bujur}`, lokasi.nama_penambah || '-'];
+            fields.forEach(value => {
+                const cell = document.createElement('td');
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
+            const actions = document.createElement('td');
+            const approve = document.createElement('button');
+            approve.textContent = 'Setujui';
+            approve.addEventListener('click', () => verifikasiLokasi(lokasi.id, 'disetujui'));
+            const reject = document.createElement('button');
+            reject.textContent = 'Tolak';
+            reject.className = 'btn-danger';
+            reject.style.marginLeft = '6px';
+            reject.addEventListener('click', () => verifikasiLokasi(lokasi.id, 'ditolak'));
+            actions.append(approve, reject);
+            row.appendChild(actions);
+            pendingBody.appendChild(row);
+        });
+    }
+
+    async function verifikasiLokasi(id, status) {
+        try {
+            const response = await fetch(`${API_URL}/${id}/verifikasi`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${adminToken}`
+                },
+                body: JSON.stringify({ status })
+            });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.message || 'Gagal memverifikasi lokasi.');
+            await ambilLokasiPending();
+            ambilSemuaLokasi();
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+
+    async function ambilUserPending() {
+        if (!adminToken) return;
+        pendingUsersBody.innerHTML = '<tr><td colspan="4">Memuat user...</td></tr>';
+        try {
+            const response = await fetch('/api/admin/users/pending', {
+                headers: { Authorization: `Bearer ${adminToken}` }
+            });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.message || 'Gagal memuat user pending.');
+            renderUserPending(data);
+        } catch (error) {
+            pendingUsersBody.innerHTML = `<tr><td colspan="4">${error.message}</td></tr>`;
+        }
+    }
+
+    function renderUserPending(users) {
+        pendingUsersBody.innerHTML = '';
+        if (users.length === 0) {
+            pendingUsersBody.innerHTML = '<tr><td colspan="4" style="text-align:center;">Tidak ada user yang menunggu persetujuan.</td></tr>';
+            return;
+        }
+        users.forEach(user => {
+            const row = document.createElement('tr');
+            [user.nama, user.email, new Date(user.created_at).toLocaleString('id-ID')].forEach(value => {
+                const cell = document.createElement('td');
+                cell.textContent = value || '-';
+                row.appendChild(cell);
+            });
+            const actions = document.createElement('td');
+            const approve = document.createElement('button');
+            approve.textContent = 'Setujui';
+            approve.addEventListener('click', () => verifikasiUser(user.id, 'disetujui'));
+            const reject = document.createElement('button');
+            reject.textContent = 'Tolak';
+            reject.className = 'btn-danger';
+            reject.style.marginLeft = '6px';
+            reject.addEventListener('click', () => verifikasiUser(user.id, 'ditolak'));
+            actions.append(approve, reject);
+            row.appendChild(actions);
+            pendingUsersBody.appendChild(row);
+        });
+    }
+
+    async function verifikasiUser(id, status) {
+        try {
+            const response = await fetch(`/api/admin/users/${id}/verifikasi`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: `Bearer ${adminToken}`
+                },
+                body: JSON.stringify({ status })
+            });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.message || 'Gagal memverifikasi user.');
+            await ambilUserPending();
+        } catch (error) {
+            alert(error.message);
+        }
+    }
+
+    if (adminToken) {
+        document.getElementById('adminLogoutButton').style.display = 'inline-block';
+        pendingCard.style.display = 'block';
+        pendingUsersCard.style.display = 'block';
+        ambilLokasiPending();
+        ambilUserPending();
+    }
 
     async function ambilSemuaLokasi() {
         try {

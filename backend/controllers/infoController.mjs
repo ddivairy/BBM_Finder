@@ -17,22 +17,29 @@ export const getInfoHariIni = async (req, res) => {
           TIMESTAMPDIFF(MINUTE, i.dibuat_pada, NOW()) AS menit_lalu,
           i.user_id,
           u.nama AS nama_pelapor,
+          u.status_verifikasi AS status_verifikasi_pelapor,
           lo.nama AS nama_lokasi,
           lo.alamat,
           lo.lintang,
           lo.bujur,
           (SELECT COUNT(*) FROM info_like il WHERE il.info_id = i.id) AS jumlah_like,
+          (SELECT COUNT(*) FROM info_dislike idl WHERE idl.info_id = i.id) AS jumlah_dislike,
           ${
             req.user
               ? "EXISTS(SELECT 1 FROM info_like il2 WHERE il2.info_id = i.id AND il2.user_id = ?)"
               : "0"
-          } AS disukai_saya
+          } AS disukai_saya,
+          ${
+            req.user
+              ? "EXISTS(SELECT 1 FROM info_dislike idl2 WHERE idl2.info_id = i.id AND idl2.user_id = ?)"
+              : "0"
+          } AS tidak_disukai_saya
        FROM info_pengecer i
        JOIN User u ON u.id = i.user_id
        LEFT JOIN lokasi lo ON lo.id = i.lokasi_id
        WHERE ${HARI_INI_WIB}
        ORDER BY i.dibuat_pada DESC`,
-      req.user ? [req.user.id] : []
+      req.user ? [req.user.id, req.user.id] : []
     );
 
     res.status(200).json(rows);
@@ -102,53 +109,79 @@ export const buatInfo = async (req, res) => {
   }
 };
 
-// POST /api/info/:id/like — toggle like (wajib login)
-export const toggleLikeInfo = async (req, res) => {
+const toggleReaksiInfo = async (req, res, reaksi) => {
+  let connection;
   try {
     const { id: infoId } = req.params;
+    const tabelAktif = reaksi === 'like' ? 'info_like' : 'info_dislike';
+    const tabelLawan = reaksi === 'like' ? 'info_dislike' : 'info_like';
 
-    const [info] = await db.query(
-      `SELECT i.id FROM info_pengecer i WHERE ${HARI_INI_WIB} AND i.id = ?`,
+    connection = await db.getConnection();
+    await connection.beginTransaction();
+
+    const [info] = await connection.query(
+      `SELECT i.id FROM info_pengecer i WHERE ${HARI_INI_WIB} AND i.id = ? FOR UPDATE`,
       [infoId]
     );
 
     if (info.length === 0) {
+      await connection.rollback();
       return res.status(404).json({
         message: "Info tidak ditemukan atau sudah lewat hari ini."
       });
     }
 
-    const [sudah] = await db.query(
-      "SELECT id FROM info_like WHERE info_id = ? AND user_id = ?",
+    const [sudah] = await connection.query(
+      `SELECT id FROM ${tabelAktif} WHERE info_id = ? AND user_id = ?`,
       [infoId, req.user.id]
     );
 
-    let disukai;
-
     if (sudah.length > 0) {
-      await db.query(
-        "DELETE FROM info_like WHERE info_id = ? AND user_id = ?",
+      await connection.query(
+        `DELETE FROM ${tabelAktif} WHERE info_id = ? AND user_id = ?`,
         [infoId, req.user.id]
       );
-      disukai = false;
     } else {
-      await db.query(
-        "INSERT INTO info_like (info_id, user_id) VALUES (?, ?)",
+      await connection.query(
+        `DELETE FROM ${tabelLawan} WHERE info_id = ? AND user_id = ?`,
         [infoId, req.user.id]
       );
-      disukai = true;
+      await connection.query(
+        `INSERT INTO ${tabelAktif} (info_id, user_id) VALUES (?, ?)`,
+        [infoId, req.user.id]
+      );
     }
 
-    const [[{ jumlah }]] = await db.query(
-      "SELECT COUNT(*) AS jumlah FROM info_like WHERE info_id = ?",
+    const [[{ jumlahLike }]] = await connection.query(
+      "SELECT COUNT(*) AS jumlahLike FROM info_like WHERE info_id = ?",
       [infoId]
     );
+    const [[{ jumlahDislike }]] = await connection.query(
+      "SELECT COUNT(*) AS jumlahDislike FROM info_dislike WHERE info_id = ?",
+      [infoId]
+    );
+    const statusAktif = sudah.length === 0;
+    await connection.commit();
 
-    res.status(200).json({ disukai, jumlah_like: jumlah });
-  } catch (error) {
-    console.error("Error toggleLikeInfo:", error);
-    res.status(500).json({
-      message: "Terjadi kesalahan saat memproses like."
+    res.status(200).json({
+      disukai: reaksi === 'like' ? statusAktif : false,
+      tidak_disukai: reaksi === 'dislike' ? statusAktif : false,
+      jumlah_like: jumlahLike,
+      jumlah_dislike: jumlahDislike,
     });
+  } catch (error) {
+    if (connection) await connection.rollback();
+    console.error(`Error toggle ${reaksi} info:`, error);
+    res.status(500).json({
+      message: `Terjadi kesalahan saat memproses ${reaksi} info.`
+    });
+  } finally {
+    connection?.release();
   }
 };
+
+// POST /api/info/:id/like — toggle like (wajib login)
+export const toggleLikeInfo = (req, res) => toggleReaksiInfo(req, res, 'like');
+
+// POST /api/info/:id/dislike — toggle dislike (wajib login)
+export const toggleDislikeInfo = (req, res) => toggleReaksiInfo(req, res, 'dislike');

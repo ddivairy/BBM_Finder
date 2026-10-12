@@ -20,15 +20,6 @@ const db = await mysql.createPool({
   keepAliveInitialDelay: 10000
 });
 
-console.log("Koneksi database MySQL berhasil!")
-
-setInterval(async () => {
-  try {
-    await db.query("SELECT 1");
-    console.log("DB masih hidup");
-  } catch (error) {
-    console.error("DB CONNECTION ERROR:", error);
-  }
-}, 30000);
+console.log("Pool database MySQL siap.")
 
 export default db;

@@ -13,7 +13,7 @@ export const login = async (req, res) => {
     }
 
     const [users] = await db.query(
-      "SELECT id, nama, email, password FROM User WHERE email = ?",
+      "SELECT id, nama, email, password, role FROM User WHERE email = ?",
       [email]
     );
 
@@ -47,7 +47,8 @@ export const login = async (req, res) => {
       user: {
         id: user.id,
         nama: user.nama,
-        email: user.email
+        email: user.email,
+        role: user.role
       }
     });
 
@@ -102,8 +103,8 @@ export const register = async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     await db.query(
-      `INSERT INTO User (nama, email, password)
-       VALUES (?, ?, ?)`,
+      `INSERT INTO User (nama, email, password, status_verifikasi)
+       VALUES (?, ?, ?, 'pending')`,
       [nama, email, hashedPassword]
     );
 
