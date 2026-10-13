@@ -475,9 +475,9 @@ export default function KomunitasPengecer({
                       </button>
                     </div>
 
-                    <span className="text-[10px] text-gray-400">
-                      Berlaku sampai tengah malam
-                    </span>
+                  <span className="text-[10px] text-gray-400 text-right leading-tight block max-w-[110px]">
+                    Berlaku sampai tengah malam
+                  </span>
                   </div>
                 </motion.article>
               );

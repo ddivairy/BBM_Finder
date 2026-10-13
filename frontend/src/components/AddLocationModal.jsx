@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import { motion, AnimatePresence } from 'framer-motion';
 import { API_URL } from '../services/api.mjs';
@@ -24,6 +24,14 @@ function LocationPicker({ position, setPosition }) {
 return position 
 ? <Marker position={position} icon={markerIcon} /> 
 : null;
+}
+
+function MapCenter({ position }) {
+  const map = useMap();
+  React.useEffect(() => {
+    map.setView(position, Math.max(map.getZoom(), 15));
+  }, [map, position]);
+  return null;
 }
 
 const pilihanBensin = [
@@ -60,6 +68,45 @@ export default function AddLocationModal({
   const [position, setPosition] = useState([-6.9175, 107.6191]);
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [searching, setSearching] = useState(false);
+  const [searchError, setSearchError] = useState('');
+
+  const handleSearchLocation = async (e) => {
+    e.preventDefault();
+    const query = searchQuery.trim();
+    if (!query) return;
+    setSearching(true);
+    setSearchError('');
+    setSearchResults([]);
+    try {
+      const params = new URLSearchParams({
+        q: query,
+        format: 'jsonv2',
+        limit: '5',
+        countrycodes: 'id',
+      });
+      const response = await fetch(`https://nominatim.openstreetmap.org/search?${params}`);
+      if (!response.ok) throw new Error('Pencarian lokasi gagal. Coba lagi.');
+      const results = await response.json();
+      setSearchResults(results);
+      if (!results.length) setSearchError('Lokasi tidak ditemukan. Coba nama tempat atau alamat lain.');
+    } catch (error) {
+      setSearchError(error.message || 'Tidak dapat mencari lokasi. Periksa koneksi internet.');
+    } finally {
+      setSearching(false);
+    }
+  };
+
+  const selectSearchResult = (result) => {
+    setPosition([Number(result.lat), Number(result.lon)]);
+    setSearchResults([]);
+    setFormData((current) => ({
+      ...current,
+      alamat: current.alamat || result.display_name,
+    }));
+  };
 
 
   // Gunakan Lokasi Saya
@@ -420,8 +467,43 @@ export default function AddLocationModal({
 
             </div>
 
+            <form onSubmit={handleSearchLocation} className="mb-2">
+              <div className="flex gap-2">
+                <input
+                  type="search"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Cari nama tempat atau alamat..."
+                  aria-label="Cari lokasi di peta"
+                  className="min-w-0 flex-1 px-3.5 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-red-500"
+                />
+                <button
+                  type="submit"
+                  disabled={searching || !searchQuery.trim()}
+                  className="px-4 py-2 rounded-xl bg-red-600 text-white font-semibold disabled:opacity-50"
+                >
+                  {searching ? 'Mencari...' : 'Cari'}
+                </button>
+              </div>
+              {searchError && <p role="status" className="text-[10px] text-amber-600 mt-1">{searchError}</p>}
+              {searchResults.length > 0 && (
+                <ul className="mt-1 max-h-32 overflow-y-auto rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800">
+                  {searchResults.map((result) => (
+                    <li key={result.place_id}>
+                      <button
+                        type="button"
+                        onClick={() => selectSearchResult(result)}
+                        className="w-full px-3 py-2 text-left text-[11px] text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700"
+                      >
+                        {result.display_name}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </form>
             <p className="text-[10px] text-gray-400 mb-2">
-              Klik pada peta untuk menentukan titik lokasi.
+              Cari tempat atau klik peta untuk menentukan titik lokasi.
             </p>
 
             <div className="h-40 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700">
@@ -435,6 +517,8 @@ export default function AddLocationModal({
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
+
+                <MapCenter position={position} />
 
                 <LocationPicker
                   position={position}
